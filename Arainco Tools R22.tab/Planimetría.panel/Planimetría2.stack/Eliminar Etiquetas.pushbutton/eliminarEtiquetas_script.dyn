@@ -85,7 +85,7 @@
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "d523079a5bbb4983acd5ff6127b53dca",
+          "Id": "e21fe154719f4cf699e0adc7a976b21a",
           "Name": "",
           "Description": "Value of expression at line 1",
           "UsingDefaultValue": false,
@@ -125,7 +125,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Get the active view in document.\n\nDocument.ActiveView (document: Document = null): Element"
+      "Description": "Get the active view in document.\n\nDocument.ActiveView (document: Document = null): Element\n\nNamespace:\nOrchid.RevitProject.Common"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
@@ -144,8 +144,8 @@
         },
         {
           "Id": "02975e8384cb48a485a0e0a331b71d74",
-          "Name": "amt",
-          "Description": "Layers of nesting to remove.\n\nint\nDefault value : -1",
+          "Name": "amount",
+          "Description": "Layers of list nesting to remove (-1 will remove all list nestings)\n\nint\nDefault value : -1",
           "UsingDefaultValue": true,
           "Level": 2,
           "UseLevels": false,
@@ -155,8 +155,8 @@
       "Outputs": [
         {
           "Id": "e0f2344b03ec4a899126e1c7b13fdd56",
-          "Name": "var[]..[]",
-          "Description": "var[]..[]",
+          "Name": "list",
+          "Description": "Flattened list by amount",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -164,7 +164,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Flattens a nested list of lists by a certain amount.\n\nList.Flatten (list: var[]..[], amt: int = -1): var[]..[]"
+      "Description": "Flattens a nested list of lists by a certain amount.\n\nList.Flatten (list: var[]..[], amount: int = -1): var[]..[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
@@ -209,7 +209,7 @@
       "Id": "d8cbc0170d8b4d199c73af7575aa2ec9"
     },
     {
-      "Start": "d523079a5bbb4983acd5ff6127b53dca",
+      "Start": "e21fe154719f4cf699e0adc7a976b21a",
       "End": "b5ed1e7196534683aeae12c2af66bd48",
       "Id": "22408ed385f84553ad540215b506d939"
     },
@@ -235,13 +235,36 @@
       ]
     }
   ],
+  "Thumbnail": null,
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.12",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "1.10",
+      "Data": {}
+    }
+  ],
+  "Author": "None provided",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
   "Bindings": [],
   "View": {
     "Dynamo": {
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": true,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.3.1.11775",
+      "Version": "2.12.1.8246",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },
@@ -285,8 +308,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 351.0,
-        "Y": 539.0
+        "X": 296.99743068439744,
+        "Y": 542.913229660551
       },
       {
         "ShowGeometry": true,
@@ -320,8 +343,8 @@
       }
     ],
     "Annotations": [],
-    "X": -287.03905609687968,
-    "Y": -346.39830180507965,
-    "Zoom": 1.2777169841077238
+    "X": -505.86656326069021,
+    "Y": -504.91178358513309,
+    "Zoom": 1.8042801313999433
   }
 }
