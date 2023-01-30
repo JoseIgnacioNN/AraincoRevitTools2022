@@ -2,7 +2,7 @@
   "Uuid": "b6053817-08d1-4b35-9afd-2ed78618445e",
   "IsCustomNode": false,
   "Description": null,
-  "Name": "Etiquetado Vigas en Elevacion de Eje o Muro",
+  "Name": "script",
   "ElementResolver": {
     "ResolutionMap": {}
   },
@@ -146,37 +146,6 @@
       ],
       "Replication": "Auto",
       "Description": "Retrieves the plane of a given view"
-    },
-    {
-      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
-      "FunctionSignature": "47b36e97-2f1b-4e08-af5e-b1674d6f254e",
-      "FunctionType": "Graph",
-      "NodeType": "FunctionNode",
-      "Id": "f32946072d1d45d78c02be003878175f",
-      "Inputs": [
-        {
-          "Id": "8099da0b05994f1e87363d74bf354bb4",
-          "Name": "refresh",
-          "Description": "bool\nDefault value : true",
-          "UsingDefaultValue": true,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "937c5cc3932147c1aea55a65f0a5d874",
-          "Name": "ActiveView",
-          "Description": "return value",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Auto",
-      "Description": "Get Active View"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
@@ -343,8 +312,8 @@
         },
         {
           "Id": "7a5a9bec5f194b7bb383de52f95957d1",
-          "Name": "amt",
-          "Description": "Layers of nesting to remove.\n\nint\nDefault value : -1",
+          "Name": "amount",
+          "Description": "Layers of list nesting to remove (-1 will remove all list nestings)\n\nint\nDefault value : -1",
           "UsingDefaultValue": true,
           "Level": 2,
           "UseLevels": false,
@@ -354,8 +323,8 @@
       "Outputs": [
         {
           "Id": "f967d6d212b94b918e3a027e65203afb",
-          "Name": "var[]..[]",
-          "Description": "var[]..[]",
+          "Name": "list",
+          "Description": "Flattened list by amount",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -363,7 +332,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Flattens a nested list of lists by a certain amount.\n\nList.Flatten (list: var[]..[], amt: int = -1): var[]..[]"
+      "Description": "Flattens a nested list of lists by a certain amount.\n\nList.Flatten (list: var[]..[], amount: int = -1): var[]..[]"
     },
     {
       "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
@@ -737,7 +706,7 @@
         {
           "Id": "ee12753fbecd4198b340af916eb451fe",
           "Name": "x",
-          "Description": "x value.\n\nvar[]..[]",
+          "Description": "Basic type object to compare (e.g. bool, int, double, string, etc.)\n\nvar[]..[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": true,
@@ -746,7 +715,7 @@
         {
           "Id": "f297a9860bd84e75af2bc72bd45f63b3",
           "Name": "y",
-          "Description": "y value.\n\nvar[]..[]",
+          "Description": "Basic type object to compare (e.g. bool, int, double, string, etc.)\n\nvar[]..[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -756,8 +725,8 @@
       "Outputs": [
         {
           "Id": "6c3b2848c1474dc2802e214d08f88e3d",
-          "Name": "var[]..[]",
-          "Description": "var[]..[]",
+          "Name": "bool",
+          "Description": "Result of equality check",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -765,7 +734,7 @@
         }
       ],
       "Replication": "Longest",
-      "Description": "Equal x to y?\n\n== (x: var[]..[], y: var[]..[]): var[]..[]"
+      "Description": "Compares if x and y are equal\n\n== (x: var[]..[], y: var[]..[]): var[]..[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -994,7 +963,7 @@
         {
           "Id": "ddeaf9e574ab455a9ca51ebc7bf2be50",
           "Name": "LabelWidth_optional",
-          "Description": "int\nDefault value : 120",
+          "Description": "int\nDefault value : 140",
           "UsingDefaultValue": true,
           "Level": 2,
           "UseLevels": false,
@@ -1081,7 +1050,7 @@
         {
           "Id": "1f8d1525045a411a9ad8b7186c150a01",
           "Name": "Values_",
-          "Description": "var[]",
+          "Description": "var[]..[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -1237,7 +1206,7 @@
         }
       ],
       "Replication": "Disabled",
-      "Description": "Allows you to select a file on the system to get its filename"
+      "Description": "Allows you to select a file on the system to get its file path."
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -1287,7 +1256,7 @@
         {
           "Id": "32845bc02e1a4ba3bba5292023c50af4",
           "Name": "Values_",
-          "Description": "var[]",
+          "Description": "var[]..[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -1375,7 +1344,7 @@
         {
           "Id": "596db981000e4e038e9348319d80d189",
           "Name": "x",
-          "Description": "x value.\n\nvar[]..[]",
+          "Description": "Integer value, double value or string\n\nvar[]..[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -1384,7 +1353,7 @@
         {
           "Id": "d67bfd1d058c409c937351b2def39b5e",
           "Name": "y",
-          "Description": "y value.\n\nvar[]..[]",
+          "Description": "Integer value, double value or string\n\nvar[]..[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -1394,8 +1363,8 @@
       "Outputs": [
         {
           "Id": "e381d532b4dd4818977dcf00a2b7aab3",
-          "Name": "var[]..[]",
-          "Description": "var[]..[]",
+          "Name": "var",
+          "Description": "The sum of two input numbers, or the concatenation of two strings",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -1403,7 +1372,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Adds x to y.\n\n+ (x: var[]..[], y: var[]..[]): var[]..[]"
+      "Description": "Returns addition of x and y\n\n+ (x: var[]..[], y: var[]..[]): var[]..[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -1590,7 +1559,7 @@
         {
           "Id": "fad340c1c2004ef29da02b474c984da2",
           "Name": "Values_",
-          "Description": "var[]",
+          "Description": "var[]..[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -1658,7 +1627,7 @@
         {
           "Id": "866fa6df64614bc59cb7acfd2a482c19",
           "Name": "x",
-          "Description": "x value.\n\nvar[]..[]",
+          "Description": "Integer value, double value or string\n\nvar[]..[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -1667,7 +1636,7 @@
         {
           "Id": "6a441bf6c8094f258bedd19d0127e3a2",
           "Name": "y",
-          "Description": "y value.\n\nvar[]..[]",
+          "Description": "Integer value, double value or string\n\nvar[]..[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -1677,8 +1646,8 @@
       "Outputs": [
         {
           "Id": "68ed1f4636a3450091f034df0c9a8ab0",
-          "Name": "var[]..[]",
-          "Description": "var[]..[]",
+          "Name": "var",
+          "Description": "The sum of two input numbers, or the concatenation of two strings",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -1686,7 +1655,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Adds x to y.\n\n+ (x: var[]..[], y: var[]..[]): var[]..[]"
+      "Description": "Returns addition of x and y\n\n+ (x: var[]..[], y: var[]..[]): var[]..[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -2255,7 +2224,7 @@
         {
           "Id": "97a5537394ec42899164b6c2fff28087",
           "Name": "x",
-          "Description": "x value.\n\nvar[]..[]",
+          "Description": "Integer or double value\n\nvar[]..[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2264,7 +2233,7 @@
         {
           "Id": "a6fe6012fbcc4c10a3fe161462f81b87",
           "Name": "y",
-          "Description": "y value.\n\nvar[]..[]",
+          "Description": "Integer or double value\n\nvar[]..[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2274,8 +2243,8 @@
       "Outputs": [
         {
           "Id": "6ce0bffeda0a4691923b232397a26c30",
-          "Name": "var[]..[]",
-          "Description": "var[]..[]",
+          "Name": "double",
+          "Description": "Result of division",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2283,7 +2252,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Divides x by y.\n\n/ (x: var[]..[], y: var[]..[]): var[]..[]"
+      "Description": "Returns division of x over y\n\n/ (x: var[]..[], y: var[]..[]): var[]..[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -2314,7 +2283,7 @@
         {
           "Id": "56456494b6f34b23a14c282df53f506a",
           "Name": "x",
-          "Description": "x value.\n\nvar[]..[]",
+          "Description": "Integer or double value\n\nvar[]..[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2323,7 +2292,7 @@
         {
           "Id": "769c5c3008a5497a9c20302764cde734",
           "Name": "y",
-          "Description": "y value.\n\nvar[]..[]",
+          "Description": "Integer or double value\n\nvar[]..[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2333,8 +2302,8 @@
       "Outputs": [
         {
           "Id": "5ae23dd6619b4a3a8f563dfb709eb24e",
-          "Name": "var[]..[]",
-          "Description": "var[]..[]",
+          "Name": "number",
+          "Description": "Result of the y input subtracted from the x input",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2342,7 +2311,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "x subtract y.\n\n- (x: var[]..[], y: var[]..[]): var[]..[]"
+      "Description": "Returns subtraction of x minus y\n\n- (x: var[]..[], y: var[]..[]): var[]..[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -2441,7 +2410,7 @@
         {
           "Id": "0b32326df8184e57bb7f6906a6d39fa9",
           "Name": "x",
-          "Description": "x value.\n\nvar[]..[]",
+          "Description": "Integer or double value\n\nvar[]..[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2450,7 +2419,7 @@
         {
           "Id": "474219b582144a99a155539f88ccf176",
           "Name": "y",
-          "Description": "y value.\n\nvar[]..[]",
+          "Description": "Integer or double value\n\nvar[]..[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2460,8 +2429,8 @@
       "Outputs": [
         {
           "Id": "6a377446704c4b58b34498bc94c06015",
-          "Name": "var[]..[]",
-          "Description": "var[]..[]",
+          "Name": "double",
+          "Description": "Result of division",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2469,7 +2438,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Divides x by y.\n\n/ (x: var[]..[], y: var[]..[]): var[]..[]"
+      "Description": "Returns division of x over y\n\n/ (x: var[]..[], y: var[]..[]): var[]..[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -2721,7 +2690,7 @@
         {
           "Id": "8bb4a4b33b87440fb154ea82142a49dd",
           "Name": "x",
-          "Description": "x value.\n\nvar[]..[]",
+          "Description": "Integer value, double value or string\n\nvar[]..[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2730,7 +2699,7 @@
         {
           "Id": "38bf7fac13ad4284850b9a796917af62",
           "Name": "y",
-          "Description": "y value.\n\nvar[]..[]",
+          "Description": "Integer value, double value or string\n\nvar[]..[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2740,8 +2709,8 @@
       "Outputs": [
         {
           "Id": "5e2d2f9dc3b14a0781752040060580ae",
-          "Name": "var[]..[]",
-          "Description": "var[]..[]",
+          "Name": "var",
+          "Description": "The sum of two input numbers, or the concatenation of two strings",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2749,7 +2718,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Adds x to y.\n\n+ (x: var[]..[], y: var[]..[]): var[]..[]"
+      "Description": "Returns addition of x and y\n\n+ (x: var[]..[], y: var[]..[]): var[]..[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -2850,6 +2819,96 @@
       ],
       "Replication": "Disabled",
       "Description": "Creates a string."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Orchid.RevitProject.Common.Document.ActiveView@Orchid.RevitProject.Common.Document",
+      "Id": "d23387316f4c4996be6955696b19de4c",
+      "Inputs": [
+        {
+          "Id": "abbbf10741d340a8a9c4077bca0af0c0",
+          "Name": "document",
+          "Description": "Document (rvt) as Orchid document.\n\nDocument\nDefault value : null",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ebf7dde7cecb46fe8266103f994ac683",
+          "Name": "View",
+          "Description": "The active view as Dynamo type.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the active view in document.\n\nDocument.ActiveView (document: Document = null): Element\n\nNamespace:\nOrchid.RevitProject.Common"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Orchid.RevitProject.Common.Document.ActiveView@Orchid.RevitProject.Common.Document",
+      "Id": "a33208b5c8b94435a1402bb224e65763",
+      "Inputs": [
+        {
+          "Id": "650eb059ad8f4a56bf5c303ae71357ba",
+          "Name": "document",
+          "Description": "Document (rvt) as Orchid document.\n\nDocument\nDefault value : null",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "03f733c48cda438686620e7e1a06b09e",
+          "Name": "View",
+          "Description": "The active view as Dynamo type.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the active view in document.\n\nDocument.ActiveView (document: Document = null): Element\n\nNamespace:\nOrchid.RevitProject.Common"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Orchid.RevitProject.Common.Document.ActiveView@Orchid.RevitProject.Common.Document",
+      "Id": "a947f0a645be4b47adeb9b677179d9b9",
+      "Inputs": [
+        {
+          "Id": "3e22a16d16514c1c9b7645a753178153",
+          "Name": "document",
+          "Description": "Document (rvt) as Orchid document.\n\nDocument\nDefault value : null",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e8a747d987d449cbaa267d449dbeaf1e",
+          "Name": "View",
+          "Description": "The active view as Dynamo type.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the active view in document.\n\nDocument.ActiveView (document: Document = null): Element\n\nNamespace:\nOrchid.RevitProject.Common"
     }
   ],
   "Connectors": [
@@ -2882,21 +2941,6 @@
       "Start": "bb02646e14a9419a852e2911f6e55de1",
       "End": "6a36b9eb51564753be9cec2306343f11",
       "Id": "23e5c7fda1084f6f9cfa63bd6f5b8e56"
-    },
-    {
-      "Start": "937c5cc3932147c1aea55a65f0a5d874",
-      "End": "457d58ed60a74a96ad340ab607278ff7",
-      "Id": "dece46e0ee734c5a8a5f55993e9aefa5"
-    },
-    {
-      "Start": "937c5cc3932147c1aea55a65f0a5d874",
-      "End": "02f580e22ce54410870e944664f5bfba",
-      "Id": "8885a7508a084c6abb762c03cd0cccfa"
-    },
-    {
-      "Start": "937c5cc3932147c1aea55a65f0a5d874",
-      "End": "5e5aceab3be04bb6a5ad57afc117e601",
-      "Id": "647fa38d7cc44e0581a1017fc4315c91"
     },
     {
       "Start": "20f7d1d995404f88b5e5473bf999e061",
@@ -3357,11 +3401,25 @@
       "Start": "fcfea7df4fb542ada627093868fede8b",
       "End": "dc9085ad22c54502b2b5e916a573c7a8",
       "Id": "2a8409e3db8a4d148ddbf9f7a8fe73fe"
+    },
+    {
+      "Start": "ebf7dde7cecb46fe8266103f994ac683",
+      "End": "457d58ed60a74a96ad340ab607278ff7",
+      "Id": "1951a5c32ef64a28950682a360308bf1"
+    },
+    {
+      "Start": "03f733c48cda438686620e7e1a06b09e",
+      "End": "02f580e22ce54410870e944664f5bfba",
+      "Id": "5bcbe1e8f49748149fc87460816059cb"
+    },
+    {
+      "Start": "e8a747d987d449cbaa267d449dbeaf1e",
+      "End": "5e5aceab3be04bb6a5ad57afc117e601",
+      "Id": "91c19362a4a44ad7bb3d7916ff0b396b"
     }
   ],
   "Dependencies": [
     "d6dbde59-f3f7-47b5-9e1e-f30991f58ac1",
-    "47b36e97-2f1b-4e08-af5e-b1674d6f254e",
     "3b14a7c8-036c-42ed-afe1-a5cb05df285d",
     "ee3e4c3a-599a-4dba-af1f-57f58b08ce3d",
     "81963227-976a-489c-a959-0e82ab922fbe",
@@ -3370,13 +3428,96 @@
     "b409775c-5d88-4d47-96a3-5135c775d26a",
     "21f76aa4-5026-47ec-b977-474280c81d74"
   ],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "Rhythm",
+      "Version": "2022.1.1",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "8e8e54f290d64cd3a125140bc613e631"
+      ]
+    },
+    {
+      "Name": "Clockwork for Dynamo 2.x",
+      "Version": "2.4.0",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "5f187f244c5f4e7c8e5f2c7a735e99fd",
+        "e3684a4a02ff4794b0825f419a18efcb"
+      ]
+    },
+    {
+      "Name": "Genius Loci",
+      "Version": "2022.4.19",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "bc6a4e9f70814196a23fa30c6386cad6",
+        "3d8c456a549744b8b3aac93101632117",
+        "52fef5afff854eb48f8ebf8154fd97ba",
+        "576f5bfdafbf4051bb69b37b794b7b6c"
+      ]
+    },
+    {
+      "Name": "Data-Shapes",
+      "Version": "2022.2.103",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "374024bfce424600a634fde1a64368af",
+        "e9b6a613e5e7489d9ab6d91d62369dca",
+        "47babc474e264e7e879881d7ed3ff04b",
+        "0c8c5c6618024be19d71274c9588f6a3",
+        "d1caac0f23894eca84f420a5c85612c3"
+      ]
+    },
+    {
+      "Name": "WombatDynamo",
+      "Version": "2.3.5",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "ccca4ead3e404c37b19bd685e867c084"
+      ]
+    },
+    {
+      "Name": "Orchid",
+      "Version": "212.1.0.8161",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "d23387316f4c4996be6955696b19de4c",
+        "a33208b5c8b94435a1402bb224e65763",
+        "a947f0a645be4b47adeb9b677179d9b9"
+      ]
+    }
+  ],
+  "Thumbnail": null,
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.12",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "1.10",
+      "Data": {}
+    }
+  ],
+  "Author": "None provided",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
   "Bindings": [],
   "View": {
     "Dynamo": {
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": true,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.0.4.12684",
+      "Version": "2.12.1.8246",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },
@@ -3440,18 +3581,8 @@
         "Name": "View.Plane",
         "ShowGeometry": false,
         "Excluded": false,
-        "X": 733.12795000750066,
-        "Y": 4232.9387844710991
-      },
-      {
-        "Id": "f32946072d1d45d78c02be003878175f",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Name": "Get Active View (BattleBIM)",
-        "ShowGeometry": false,
-        "Excluded": false,
-        "X": 685.12795000750066,
-        "Y": 4324.4281919707391
+        "X": 733.127950007501,
+        "Y": 4232.9387844711
       },
       {
         "Id": "e3684a4a02ff4794b0825f419a18efcb",
@@ -3460,8 +3591,8 @@
         "Name": "Vector.IsParallelToPlane",
         "ShowGeometry": false,
         "Excluded": false,
-        "X": 729.12795000750066,
-        "Y": 4115.4493769714591
+        "X": 729.127950007501,
+        "Y": 4115.44937697146
       },
       {
         "Id": "6fe10575278146fa9e4a158060204ec5",
@@ -4242,11 +4373,41 @@
         "Excluded": false,
         "X": -3444.609253064752,
         "Y": 6632.038028618641
+      },
+      {
+        "Id": "d23387316f4c4996be6955696b19de4c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "o|Document.ActiveView",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 704.127950007501,
+        "Y": 4329.20573743395
+      },
+      {
+        "Id": "a33208b5c8b94435a1402bb224e65763",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "o|Document.ActiveView",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 4292.8607454340054,
+        "Y": 3837.5739685188605
+      },
+      {
+        "Id": "a947f0a645be4b47adeb9b677179d9b9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "o|Document.ActiveView",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 4323.5213498811027,
+        "Y": 4492.6945915484221
       }
     ],
     "Annotations": [],
-    "X": 1190.0187921725972,
-    "Y": -827.70598858395306,
-    "Zoom": 0.2163930338205079
+    "X": 956.30450771607423,
+    "Y": -716.20553919871543,
+    "Zoom": 0.25777061721951677
   }
 }
