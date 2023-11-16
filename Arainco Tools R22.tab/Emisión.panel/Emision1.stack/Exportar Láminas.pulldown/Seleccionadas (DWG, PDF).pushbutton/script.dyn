@@ -105,7 +105,7 @@
         {
           "Id": "d9f332c52be246ff9ae6b70abd2329f3",
           "Name": "LabelWidth_optional",
-          "Description": "int\nDefault value : 120",
+          "Description": "int\nDefault value : 140",
           "UsingDefaultValue": true,
           "Level": 2,
           "UseLevels": false,
@@ -337,7 +337,7 @@
         {
           "Id": "ea25ff3fe5fb40c281c64a47ca896b02",
           "Name": "Values_",
-          "Description": "var[]",
+          "Description": "var[]..[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": true,
@@ -850,7 +850,7 @@
         {
           "Id": "4e014c9a6ecf475f87e7d6628cdfc12d",
           "Name": "x",
-          "Description": "x value.\n\nvar[]..[]",
+          "Description": "Basic type object to compare (e.g. bool, int, double, string, etc.)\n\nvar[]..[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -859,7 +859,7 @@
         {
           "Id": "1071d3d6bc46486a9a384391cc7302d5",
           "Name": "y",
-          "Description": "y value.\n\nvar[]..[]",
+          "Description": "Basic type object to compare (e.g. bool, int, double, string, etc.)\n\nvar[]..[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -869,8 +869,8 @@
       "Outputs": [
         {
           "Id": "f96e497c63e94e95b3be9dccf8686dd0",
-          "Name": "var[]..[]",
-          "Description": "var[]..[]",
+          "Name": "bool",
+          "Description": "Result of equality check",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -878,7 +878,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Equal x to y?\n\n== (x: var[]..[], y: var[]..[]): var[]..[]"
+      "Description": "Compares if x and y are equal\n\n== (x: var[]..[], y: var[]..[]): var[]..[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -985,7 +985,7 @@
         },
         {
           "Id": "6d2753f8e33241649f4789793f4855cd",
-          "Name": "unique keys",
+          "Name": "uniqueKeys",
           "Description": "key value corresponding to each group",
           "UsingDefaultValue": false,
           "Level": 2,
@@ -1064,7 +1064,7 @@
         {
           "Id": "d0f562a418a64cc7851cda14f7ead86e",
           "Name": "x",
-          "Description": "x value.\n\nvar[]..[]",
+          "Description": "Integer value, double value or string\n\nvar[]..[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -1073,7 +1073,7 @@
         {
           "Id": "7adb126ed11941e485b6359f8726ce0e",
           "Name": "y",
-          "Description": "y value.\n\nvar[]..[]",
+          "Description": "Integer value, double value or string\n\nvar[]..[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -1083,8 +1083,8 @@
       "Outputs": [
         {
           "Id": "a5be4224f4894a55aed59416125f725b",
-          "Name": "var[]..[]",
-          "Description": "var[]..[]",
+          "Name": "var",
+          "Description": "The sum of two input numbers, or the concatenation of two strings",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -1092,7 +1092,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Adds x to y.\n\n+ (x: var[]..[], y: var[]..[]): var[]..[]"
+      "Description": "Returns addition of x and y\n\n+ (x: var[]..[], y: var[]..[]): var[]..[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -1250,8 +1250,8 @@
         },
         {
           "Id": "f431909eaae949688b1120372dddca74",
-          "Name": "amt",
-          "Description": "Layers of nesting to remove.\n\nint\nDefault value : -1",
+          "Name": "amount",
+          "Description": "Layers of list nesting to remove (-1 will remove all list nestings)\n\nint\nDefault value : -1",
           "UsingDefaultValue": true,
           "Level": 2,
           "UseLevels": false,
@@ -1261,8 +1261,8 @@
       "Outputs": [
         {
           "Id": "5862fa539ce34cf485b6751cdff0b108",
-          "Name": "var[]..[]",
-          "Description": "var[]..[]",
+          "Name": "list",
+          "Description": "Flattened list by amount",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -1270,7 +1270,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Flattens a nested list of lists by a certain amount.\n\nList.Flatten (list: var[]..[], amt: int = -1): var[]..[]"
+      "Description": "Flattens a nested list of lists by a certain amount.\n\nList.Flatten (list: var[]..[], amount: int = -1): var[]..[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
@@ -1358,8 +1358,8 @@
         },
         {
           "Id": "8c987ab923a14b8cb550c83b16143bf0",
-          "Name": "amt",
-          "Description": "Layers of nesting to remove.\n\nint\nDefault value : -1",
+          "Name": "amount",
+          "Description": "Layers of list nesting to remove (-1 will remove all list nestings)\n\nint\nDefault value : -1",
           "UsingDefaultValue": true,
           "Level": 2,
           "UseLevels": false,
@@ -1369,8 +1369,8 @@
       "Outputs": [
         {
           "Id": "d5038f5000334b309e80343b85f31577",
-          "Name": "var[]..[]",
-          "Description": "var[]..[]",
+          "Name": "list",
+          "Description": "Flattened list by amount",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -1378,7 +1378,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Flattens a nested list of lists by a certain amount.\n\nList.Flatten (list: var[]..[], amt: int = -1): var[]..[]"
+      "Description": "Flattens a nested list of lists by a certain amount.\n\nList.Flatten (list: var[]..[], amount: int = -1): var[]..[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
@@ -1388,7 +1388,7 @@
       "Inputs": [
         {
           "Id": "dee90347f77f4f8c9fa4913e283498a9",
-          "Name": "obj",
+          "Name": "object",
           "Description": "An object.\n\nvar",
           "UsingDefaultValue": false,
           "Level": 2,
@@ -1399,8 +1399,8 @@
       "Outputs": [
         {
           "Id": "3c9e7ce66f4b448bb652e45439dcf73f",
-          "Name": "var[]..[]",
-          "Description": "var[]..[]",
+          "Name": "object",
+          "Description": "Same object",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -1408,7 +1408,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Returns what is passed in, doing nothing.\n\nObject.Identity (obj: var): var[]..[]"
+      "Description": "Returns what is passed in, doing nothing.\n\nObject.Identity (object: var): var[]..[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -1495,7 +1495,7 @@
         },
         {
           "Id": "54db59efa4cd4b47968be34a66735ee5",
-          "Name": "unique keys",
+          "Name": "uniqueKeys",
           "Description": "key value corresponding to each group",
           "UsingDefaultValue": false,
           "Level": 2,
@@ -1594,8 +1594,8 @@
       "Inputs": [
         {
           "Id": "cebd6a2db46d47ddbf02ef635ec72bec",
-          "Name": "str",
-          "Description": "String to split up.\n\nstring",
+          "Name": "string",
+          "Description": "String to split up\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -1615,7 +1615,7 @@
         {
           "Id": "ad86e5debe2a4768b46aec1e82c84c5a",
           "Name": "strings",
-          "Description": "List of strings made from the input string.",
+          "Description": "List of strings made from the input string",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -1623,7 +1623,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Divides a single string into a list of strings, with divisions determined by the given separator strings.\n\nString.Split (str: string, separators: string[]): string[]"
+      "Description": "Divides a single string into a list of strings, with divisions determined by the given separator strings.\n\nString.Split (string: string, separators: string[]): string[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
@@ -1694,7 +1694,7 @@
         {
           "Id": "db81730c381b47f69b92f9790f472255",
           "Name": "path",
-          "Description": "string",
+          "Description": "String representation of existing path\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": true,
@@ -1703,7 +1703,7 @@
         {
           "Id": "a69c2b0406564def88c0edf78ace39ed",
           "Name": "newPath",
-          "Description": "string",
+          "Description": "String representation of new path\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": true,
@@ -1712,7 +1712,7 @@
         {
           "Id": "a7aa4f6c8d8144a2a91ae742054d6e08",
           "Name": "overwrite",
-          "Description": "bool\nDefault value : false",
+          "Description": "Toggle to overwrite existing files\n\nbool\nDefault value : false",
           "UsingDefaultValue": true,
           "Level": 2,
           "UseLevels": false,
@@ -1723,7 +1723,7 @@
         {
           "Id": "7f2f2d3ae67f4b50abad0b4dd9f15194",
           "Name": "void",
-          "Description": "void",
+          "Description": "Node performs a task, doesn’t produce an output",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -1909,7 +1909,7 @@
         {
           "Id": "184e1370a4c644ba89b260794964391a",
           "Name": "key",
-          "Description": "The key in the Dictionary to obtain.\n\nstring",
+          "Description": "The key in the Dictionary to obtain value for\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -1920,7 +1920,7 @@
         {
           "Id": "eea4089d011742fdacca2bdc6d0c1cba",
           "Name": "value",
-          "Description": "The value at the specified key or null if it is not set.",
+          "Description": "Value at the specified key or null if it is not set",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -1998,8 +1998,8 @@
       "Inputs": [
         {
           "Id": "47e2349190c342999fb9b6b04c8d85a7",
-          "Name": "str",
-          "Description": "String to split up.\n\nstring",
+          "Name": "string",
+          "Description": "String to split up\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2019,7 +2019,7 @@
         {
           "Id": "fe37e92a80a342088af28723fa858de9",
           "Name": "strings",
-          "Description": "List of strings made from the input string.",
+          "Description": "List of strings made from the input string",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2027,7 +2027,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Divides a single string into a list of strings, with divisions determined by the given separator strings.\n\nString.Split (str: string, separators: string[]): string[]"
+      "Description": "Divides a single string into a list of strings, with divisions determined by the given separator strings.\n\nString.Split (string: string, separators: string[]): string[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
@@ -2077,7 +2077,7 @@
         {
           "Id": "e06138a2c70c4476b2dc8429774a32f2",
           "Name": "keys",
-          "Description": "The string keys of the Dictionary\n\nstring[]",
+          "Description": "Keys of dictionary\n\nstring[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2086,7 +2086,7 @@
         {
           "Id": "84a085c4b0524e3497a19dcc0e81ff0a",
           "Name": "values",
-          "Description": "The values of the Dictionary\n\nvar[]..[]",
+          "Description": "Values of dictionary\n\nvar[]..[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2097,7 +2097,7 @@
         {
           "Id": "b0dc8c52547c40258b4991ef70749125",
           "Name": "dictionary",
-          "Description": "The result Dictionary",
+          "Description": "Dictionary from keys and values",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2144,7 +2144,7 @@
         },
         {
           "Id": "ce6ce8b4b79b40c9a802b556051b0bfe",
-          "Name": "unique keys",
+          "Name": "uniqueKeys",
           "Description": "key value corresponding to each group",
           "UsingDefaultValue": false,
           "Level": 2,
@@ -2262,8 +2262,8 @@
       "Inputs": [
         {
           "Id": "0250871d4f9d4242979605fbf5be7642",
-          "Name": "str",
-          "Description": "String to split up.\n\nstring",
+          "Name": "string",
+          "Description": "String to split up\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2283,7 +2283,7 @@
         {
           "Id": "b207fb8dbba94ea4be4cbd35281192a0",
           "Name": "strings",
-          "Description": "List of strings made from the input string.",
+          "Description": "List of strings made from the input string",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2291,7 +2291,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Divides a single string into a list of strings, with divisions determined by the given separator strings.\n\nString.Split (str: string, separators: string[]): string[]"
+      "Description": "Divides a single string into a list of strings, with divisions determined by the given separator strings.\n\nString.Split (string: string, separators: string[]): string[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -2382,7 +2382,7 @@
         {
           "Id": "049c00b121804d6e8800a565aee1ca62",
           "Name": "directory",
-          "Description": "Directory to copy.\n\nvar",
+          "Description": "Directory to copy\n\nvar",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2391,7 +2391,7 @@
         {
           "Id": "729510ceccf845e386cacaf3bfa8cbe0",
           "Name": "destinationPath",
-          "Description": "Destination of the copy operation on disk.\n\nstring",
+          "Description": "Destination of the copy operation on disk\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2400,7 +2400,7 @@
         {
           "Id": "09591ebf45d94a4fadbe1fa9e21a9208",
           "Name": "overwriteFiles",
-          "Description": "bool\nDefault value : false",
+          "Description": "Toggle to overwrite existing directory\n\nbool\nDefault value : false",
           "UsingDefaultValue": true,
           "Level": 2,
           "UseLevels": false,
@@ -2411,7 +2411,7 @@
         {
           "Id": "9ef3660c1e8c43df90e3ec293bbd2eb7",
           "Name": "void",
-          "Description": "void",
+          "Description": "Node performs a task, doesn’t produce an output",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2450,7 +2450,7 @@
         {
           "Id": "854437fc467f44c4b84f480d5c6a6a93",
           "Name": "directory",
-          "Description": "var",
+          "Description": "Directory to get contents of\n\nvar",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2459,7 +2459,7 @@
         {
           "Id": "ca230fa0b73d4967af8d0388607764f5",
           "Name": "searchString",
-          "Description": "string\nDefault value : \"*.*\"",
+          "Description": "Search string used to filter results\n\nstring\nDefault value : \"*.*\"",
           "UsingDefaultValue": true,
           "Level": 2,
           "UseLevels": false,
@@ -2468,7 +2468,7 @@
         {
           "Id": "17aa504d77a242e88c7b6259c7abfcc7",
           "Name": "includeSubdirectories",
-          "Description": "bool\nDefault value : false",
+          "Description": "Set to true to include files and folders in subdirectories (recursive) or set to false to include results from top-level of given directory only.\n\nbool\nDefault value : false",
           "UsingDefaultValue": true,
           "Level": 2,
           "UseLevels": false,
@@ -2479,7 +2479,7 @@
         {
           "Id": "6d92a3d0bfcc4a639dba469f5eb627cb",
           "Name": "files",
-          "Description": "var",
+          "Description": "Resulting files from query",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2488,7 +2488,7 @@
         {
           "Id": "1a285a122eab4045b1eeef21f327e558",
           "Name": "directories",
-          "Description": "var",
+          "Description": "Resulting directories from query",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2496,7 +2496,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "FileSystem.GetDirectoryContents (directory: var, searchString: string = \"*.*\", includeSubdirectories: bool = false): var[]..[]"
+      "Description": "Will return a list of files and directories that are contained within a given directory. An optional searchString can be used to filter the results.\n\nFileSystem.GetDirectoryContents (directory: var, searchString: string = \"*.*\", includeSubdirectories: bool = false): var[]..[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -2527,7 +2527,7 @@
         {
           "Id": "cc27ce3e0efd42109bd4e7a451601cdd",
           "Name": "path",
-          "Description": "Path to a directory on disk.\n\nstring",
+          "Description": "Path to a directory on disk\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2547,7 +2547,7 @@
         {
           "Id": "e73395914b944eb19fc45074cef15586",
           "Name": "void",
-          "Description": "void",
+          "Description": "Node performs a task, doesn’t produce an output",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2566,7 +2566,7 @@
         {
           "Id": "e9c0564e94a74473a00ca2416013c7a5",
           "Name": "path",
-          "Description": "string",
+          "Description": "File path to delete\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2577,7 +2577,7 @@
         {
           "Id": "c363cb6f40b7425085958530080da8a9",
           "Name": "void",
-          "Description": "void",
+          "Description": "Node performs a task, doesn’t produce an output",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2703,7 +2703,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Get the files in a directory and its subdirectories. Use string for extension type, default is * for all files! If files are are readonly but not hidden, are they included. If files are both hidden or readonly files (and thereby system files) are they left out.\n\nDirectory.Contents (directory: string, searchString: string = \"*\", deepSearch: bool = false, condense: bool = true): var[]..[]"
+      "Description": "Get the files in a directory and its subdirectories. Use string for extension type, default is * for all files! If files are are readonly but not hidden, are they included. If files are both hidden or readonly files (and thereby system files) are they left out.\n\nDirectory.Contents (directory: string, searchString: string = \"*\", deepSearch: bool = false, condense: bool = true): var[]..[]\n\nNamespace:\nOrchid.Common"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -2734,8 +2734,8 @@
       "Inputs": [
         {
           "Id": "1b0b599fe5ec49a18a8f0537d4f597ab",
-          "Name": "str",
-          "Description": "String to split up.\n\nstring",
+          "Name": "string",
+          "Description": "String to split up\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2755,7 +2755,7 @@
         {
           "Id": "613884bba75e4eadbcbb6a1eb9df1cab",
           "Name": "strings",
-          "Description": "List of strings made from the input string.",
+          "Description": "List of strings made from the input string",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2763,7 +2763,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Divides a single string into a list of strings, with divisions determined by the given separator strings.\n\nString.Split (str: string, separators: string[]): string[]"
+      "Description": "Divides a single string into a list of strings, with divisions determined by the given separator strings.\n\nString.Split (string: string, separators: string[]): string[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -2814,8 +2814,8 @@
       "Inputs": [
         {
           "Id": "9e7a69e8d0b443dfaf379899f44759b7",
-          "Name": "str",
-          "Description": "String to split up.\n\nstring",
+          "Name": "string",
+          "Description": "String to split up\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2835,7 +2835,7 @@
         {
           "Id": "6ee3c67efe724fdc84f9c376d87f7f77",
           "Name": "strings",
-          "Description": "List of strings made from the input string.",
+          "Description": "List of strings made from the input string",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2843,7 +2843,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Divides a single string into a list of strings, with divisions determined by the given separator strings.\n\nString.Split (str: string, separators: string[]): string[]"
+      "Description": "Divides a single string into a list of strings, with divisions determined by the given separator strings.\n\nString.Split (string: string, separators: string[]): string[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -2874,7 +2874,7 @@
         {
           "Id": "dd4a729c911e4a5cb63125cd8bf59bfe",
           "Name": "directory",
-          "Description": "Directory to copy.\n\nvar",
+          "Description": "Directory to copy\n\nvar",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2883,7 +2883,7 @@
         {
           "Id": "182d8e07817e49a0bb5dd95de0d2476f",
           "Name": "destinationPath",
-          "Description": "Destination of the copy operation on disk.\n\nstring",
+          "Description": "Destination of the copy operation on disk\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2892,7 +2892,7 @@
         {
           "Id": "ff3d904fa96a45648cfaabee24503386",
           "Name": "overwriteFiles",
-          "Description": "bool\nDefault value : false",
+          "Description": "Toggle to overwrite existing directory\n\nbool\nDefault value : false",
           "UsingDefaultValue": true,
           "Level": 2,
           "UseLevels": false,
@@ -2903,7 +2903,7 @@
         {
           "Id": "b964bd889d5944129b37de0eef1eb919",
           "Name": "void",
-          "Description": "void",
+          "Description": "Node performs a task, doesn’t produce an output",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -3101,7 +3101,7 @@
         {
           "Id": "ce68897da58e4a9f99a383f8e2fe14f0",
           "Name": "path",
-          "Description": "string",
+          "Description": "File path to delete\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -3112,7 +3112,7 @@
         {
           "Id": "6e77c26e784345329118c9f9f692041c",
           "Name": "void",
-          "Description": "void",
+          "Description": "Node performs a task, doesn’t produce an output",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -3328,7 +3328,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Determines if any items in the given list has a true value.\n\nList.AnyTrue (list: bool[]): bool"
+      "Description": "Determines if any items in the given list has a true value.\n\nList.AnyTrue (list: bool[]): bool\n\nNamespace:\nOrchid.Common"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
@@ -3394,7 +3394,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Rename file.\n\nFile.Rename (directory: string, extension: string, sourceName: string[], targetName: string[], condense: bool = true): var[]..[]"
+      "Description": "Rename file.\n\nFile.Rename (directory: string, extension: string, sourceName: string[], targetName: string[], condense: bool = true): var[]..[]\n\nNamespace:\nOrchid.Common"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
@@ -3451,7 +3451,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Get the files in a directory and its subdirectories. Use string for extension type, default is * for all files! If files are are readonly but not hidden, are they included. If files are both hidden or readonly files (and thereby system files) are they left out.\n\nDirectory.Contents (directory: string, searchString: string = \"*\", deepSearch: bool = false, condense: bool = true): var[]..[]"
+      "Description": "Get the files in a directory and its subdirectories. Use string for extension type, default is * for all files! If files are are readonly but not hidden, are they included. If files are both hidden or readonly files (and thereby system files) are they left out.\n\nDirectory.Contents (directory: string, searchString: string = \"*\", deepSearch: bool = false, condense: bool = true): var[]..[]\n\nNamespace:\nOrchid.Common"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSVarArgFunction, DynamoCore",
@@ -3462,8 +3462,8 @@
       "Inputs": [
         {
           "Id": "7202c23e2e55439181714e13abcc4079",
-          "Name": "str",
-          "Description": "String to split up.\n\nstring",
+          "Name": "string",
+          "Description": "String to split up\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -3483,7 +3483,7 @@
         {
           "Id": "d9da0f704d3347b69d37b8901d661b0b",
           "Name": "strings",
-          "Description": "List of strings made from the input string.",
+          "Description": "List of strings made from the input string",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -3491,7 +3491,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Divides a single string into a list of strings, with divisions determined by the given separator strings.\n\nString.Split (str: string, separators: string[]): string[]"
+      "Description": "Divides a single string into a list of strings, with divisions determined by the given separator strings.\n\nString.Split (string: string, separators: string[]): string[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -3601,7 +3601,7 @@
       "Outputs": [
         {
           "Id": "682159548cbe42d29e5a584f23d580d2",
-          "Name": "str",
+          "Name": "string",
           "Description": "A string made from the list of strings including the separator character.",
           "UsingDefaultValue": false,
           "Level": 2,
@@ -3649,8 +3649,8 @@
         },
         {
           "Id": "2515f69bd3794e189c15e3c5d7b55925",
-          "Name": "amt",
-          "Description": "Layers of nesting to remove.\n\nint\nDefault value : -1",
+          "Name": "amount",
+          "Description": "Layers of list nesting to remove (-1 will remove all list nestings)\n\nint\nDefault value : -1",
           "UsingDefaultValue": true,
           "Level": 2,
           "UseLevels": false,
@@ -3660,8 +3660,8 @@
       "Outputs": [
         {
           "Id": "de16b0fb040140e4afd8ba6ab8799f4e",
-          "Name": "var[]..[]",
-          "Description": "var[]..[]",
+          "Name": "list",
+          "Description": "Flattened list by amount",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -3669,7 +3669,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Flattens a nested list of lists by a certain amount.\n\nList.Flatten (list: var[]..[], amt: int = -1): var[]..[]"
+      "Description": "Flattens a nested list of lists by a certain amount.\n\nList.Flatten (list: var[]..[], amount: int = -1): var[]..[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
@@ -3699,8 +3699,8 @@
       "Outputs": [
         {
           "Id": "8d228a001ab94bcab7d43cd6fb74574f",
-          "Name": "var[]..[]",
-          "Description": "var[]..[]",
+          "Name": "list",
+          "Description": "List with added items",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -3747,8 +3747,8 @@
         },
         {
           "Id": "aeba3fef3f4141bbaa6146ffab0fceb3",
-          "Name": "amt",
-          "Description": "Layers of nesting to remove.\n\nint\nDefault value : -1",
+          "Name": "amount",
+          "Description": "Layers of list nesting to remove (-1 will remove all list nestings)\n\nint\nDefault value : -1",
           "UsingDefaultValue": true,
           "Level": 2,
           "UseLevels": false,
@@ -3758,8 +3758,8 @@
       "Outputs": [
         {
           "Id": "71078d10a24241cfb30e75c71ed28fdf",
-          "Name": "var[]..[]",
-          "Description": "var[]..[]",
+          "Name": "list",
+          "Description": "Flattened list by amount",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -3767,7 +3767,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Flattens a nested list of lists by a certain amount.\n\nList.Flatten (list: var[]..[], amt: int = -1): var[]..[]"
+      "Description": "Flattens a nested list of lists by a certain amount.\n\nList.Flatten (list: var[]..[], amount: int = -1): var[]..[]"
     },
     {
       "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
@@ -3798,7 +3798,7 @@
         {
           "Id": "bf3d986688964d74ab3a0ca363a46c32",
           "Name": "path",
-          "Description": "Path to get the file name of.\n\nstring",
+          "Description": "Path to get the file name of\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -3807,7 +3807,7 @@
         {
           "Id": "2bbc7137d27e4352b1dbe66888ee6016",
           "Name": "withExtension",
-          "Description": "Determines whether or not the extension is included in the result, defaults to true.\n\nbool\nDefault value : true",
+          "Description": "Toggle to include extension in result\n\nbool\nDefault value : true",
           "UsingDefaultValue": true,
           "Level": 2,
           "UseLevels": false,
@@ -3818,7 +3818,7 @@
         {
           "Id": "c1b0dbd0c8af43daa27b1355b7b247de",
           "Name": "string",
-          "Description": "string",
+          "Description": "File name from file path",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -3923,7 +3923,7 @@
         },
         {
           "Id": "3dad5be93958406f8fb1d259b2f8c6d3",
-          "Name": "unique keys",
+          "Name": "uniqueKeys",
           "Description": "key value corresponding to each group",
           "UsingDefaultValue": false,
           "Level": 2,
@@ -3943,7 +3943,7 @@
         {
           "Id": "3d6413d7bdab4f17aed3af848a851685",
           "Name": "path",
-          "Description": "string",
+          "Description": "String representation of existing path\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": true,
@@ -3952,7 +3952,7 @@
         {
           "Id": "711c2508941d448f89afcf205cb0ca4f",
           "Name": "newPath",
-          "Description": "string",
+          "Description": "String representation of new path\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": true,
@@ -3961,7 +3961,7 @@
         {
           "Id": "fe4b18a630014961b672494b73881d2e",
           "Name": "overwrite",
-          "Description": "bool\nDefault value : false",
+          "Description": "Toggle to overwrite existing files\n\nbool\nDefault value : false",
           "UsingDefaultValue": true,
           "Level": 2,
           "UseLevels": false,
@@ -3972,7 +3972,7 @@
         {
           "Id": "923c9405284c4ce98f76be0a172610f4",
           "Name": "void",
-          "Description": "void",
+          "Description": "Node performs a task, doesn’t produce an output",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -3991,7 +3991,7 @@
         {
           "Id": "11e7c19e350442ccb2084e8ebec6fd1c",
           "Name": "directory",
-          "Description": "var",
+          "Description": "Directory to get contents of\n\nvar",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -4000,7 +4000,7 @@
         {
           "Id": "6799e70c2fbb42238106f07ce010439d",
           "Name": "searchString",
-          "Description": "string\nDefault value : \"*.*\"",
+          "Description": "Search string used to filter results\n\nstring\nDefault value : \"*.*\"",
           "UsingDefaultValue": true,
           "Level": 2,
           "UseLevels": false,
@@ -4009,7 +4009,7 @@
         {
           "Id": "316764d6daea4b41b0b55b96da494161",
           "Name": "includeSubdirectories",
-          "Description": "bool\nDefault value : false",
+          "Description": "Set to true to include files and folders in subdirectories (recursive) or set to false to include results from top-level of given directory only.\n\nbool\nDefault value : false",
           "UsingDefaultValue": true,
           "Level": 2,
           "UseLevels": false,
@@ -4020,7 +4020,7 @@
         {
           "Id": "a72837dfc6064eebab7c68ac88b43b49",
           "Name": "files",
-          "Description": "var",
+          "Description": "Resulting files from query",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -4029,7 +4029,7 @@
         {
           "Id": "0c4d45fd8aa84e07a01e2847c25c3095",
           "Name": "directories",
-          "Description": "var",
+          "Description": "Resulting directories from query",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -4037,7 +4037,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "FileSystem.GetDirectoryContents (directory: var, searchString: string = \"*.*\", includeSubdirectories: bool = false): var[]..[]"
+      "Description": "Will return a list of files and directories that are contained within a given directory. An optional searchString can be used to filter the results.\n\nFileSystem.GetDirectoryContents (directory: var, searchString: string = \"*.*\", includeSubdirectories: bool = false): var[]..[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -4118,8 +4118,8 @@
       "Inputs": [
         {
           "Id": "be73d88fc0434ab5b6b5334c05dfb2b4",
-          "Name": "str",
-          "Description": "String to split up.\n\nstring",
+          "Name": "string",
+          "Description": "String to split up\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -4139,7 +4139,7 @@
         {
           "Id": "21d971ebf8784d4caf1323edd16f71a1",
           "Name": "strings",
-          "Description": "List of strings made from the input string.",
+          "Description": "List of strings made from the input string",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -4147,7 +4147,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Divides a single string into a list of strings, with divisions determined by the given separator strings.\n\nString.Split (str: string, separators: string[]): string[]"
+      "Description": "Divides a single string into a list of strings, with divisions determined by the given separator strings.\n\nString.Split (string: string, separators: string[]): string[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -4318,8 +4318,8 @@
       "Inputs": [
         {
           "Id": "31d9799cd1784e5db72f541279dbfa87",
-          "Name": "str",
-          "Description": "String to split up.\n\nstring",
+          "Name": "string",
+          "Description": "String to split up\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -4339,7 +4339,7 @@
         {
           "Id": "d2b2eefd56fb483f8ec3afc329b373de",
           "Name": "strings",
-          "Description": "List of strings made from the input string.",
+          "Description": "List of strings made from the input string",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -4347,7 +4347,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Divides a single string into a list of strings, with divisions determined by the given separator strings.\n\nString.Split (str: string, separators: string[]): string[]"
+      "Description": "Divides a single string into a list of strings, with divisions determined by the given separator strings.\n\nString.Split (string: string, separators: string[]): string[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
@@ -4523,7 +4523,7 @@
         },
         {
           "Id": "ffcb833cf729416c8f9d1bdfb5e7a103",
-          "Name": "unique keys",
+          "Name": "uniqueKeys",
           "Description": "key value corresponding to each group",
           "UsingDefaultValue": false,
           "Level": 2,
@@ -4563,8 +4563,8 @@
       "Inputs": [
         {
           "Id": "a6d046e25fa64bcbbc8da5adace4d732",
-          "Name": "str",
-          "Description": "String to split up.\n\nstring",
+          "Name": "string",
+          "Description": "String to split up\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -4584,7 +4584,7 @@
         {
           "Id": "e90107b884224d76b5d2f1576e075294",
           "Name": "strings",
-          "Description": "List of strings made from the input string.",
+          "Description": "List of strings made from the input string",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -4592,7 +4592,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Divides a single string into a list of strings, with divisions determined by the given separator strings.\n\nString.Split (str: string, separators: string[]): string[]"
+      "Description": "Divides a single string into a list of strings, with divisions determined by the given separator strings.\n\nString.Split (string: string, separators: string[]): string[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -4702,8 +4702,8 @@
       "Inputs": [
         {
           "Id": "e21ad06173774b11836ed24d7e6722a2",
-          "Name": "str",
-          "Description": "String to split up.\n\nstring",
+          "Name": "string",
+          "Description": "String to split up\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -4723,7 +4723,7 @@
         {
           "Id": "0b4b68e56f844306bce9bda65b70c2ce",
           "Name": "strings",
-          "Description": "List of strings made from the input string.",
+          "Description": "List of strings made from the input string",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -4731,7 +4731,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Divides a single string into a list of strings, with divisions determined by the given separator strings.\n\nString.Split (str: string, separators: string[]): string[]"
+      "Description": "Divides a single string into a list of strings, with divisions determined by the given separator strings.\n\nString.Split (string: string, separators: string[]): string[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -4940,8 +4940,8 @@
       "Inputs": [
         {
           "Id": "2afa53e3a0414373a15056de629bd7ac",
-          "Name": "str",
-          "Description": "String to split up.\n\nstring",
+          "Name": "string",
+          "Description": "String to split up\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -4961,7 +4961,7 @@
         {
           "Id": "057dba4e7bb0465e951147e542d90a4c",
           "Name": "strings",
-          "Description": "List of strings made from the input string.",
+          "Description": "List of strings made from the input string",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -4969,7 +4969,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Divides a single string into a list of strings, with divisions determined by the given separator strings.\n\nString.Split (str: string, separators: string[]): string[]"
+      "Description": "Divides a single string into a list of strings, with divisions determined by the given separator strings.\n\nString.Split (string: string, separators: string[]): string[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -5039,7 +5039,7 @@
         {
           "Id": "f147b89b1d674fdd87f2c8353b68cb9a",
           "Name": "keys",
-          "Description": "The string keys of the Dictionary\n\nstring[]",
+          "Description": "Keys of dictionary\n\nstring[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -5048,7 +5048,7 @@
         {
           "Id": "f275022a2571402eb8a181b18f217a5e",
           "Name": "values",
-          "Description": "The values of the Dictionary\n\nvar[]..[]",
+          "Description": "Values of dictionary\n\nvar[]..[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -5059,7 +5059,7 @@
         {
           "Id": "fa534df3bf374184b28bf33b5eb42909",
           "Name": "dictionary",
-          "Description": "The result Dictionary",
+          "Description": "Dictionary from keys and values",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -5087,7 +5087,7 @@
         {
           "Id": "f08c041f0f0c4d4aa0aa4c0302e91002",
           "Name": "key",
-          "Description": "The key in the Dictionary to obtain.\n\nstring",
+          "Description": "The key in the Dictionary to obtain value for\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -5098,7 +5098,7 @@
         {
           "Id": "8a08b272b38145d1a319bb3b5bb4ac85",
           "Name": "value",
-          "Description": "The value at the specified key or null if it is not set.",
+          "Description": "Value at the specified key or null if it is not set",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -5198,7 +5198,7 @@
         {
           "Id": "d23a310ace12449ea9ac758f15e27c99",
           "Name": "directory",
-          "Description": "Directory to copy.\n\nvar",
+          "Description": "Directory to copy\n\nvar",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -5207,7 +5207,7 @@
         {
           "Id": "6c9b8ea05ea34a90bd613c838b881997",
           "Name": "destinationPath",
-          "Description": "Destination of the copy operation on disk.\n\nstring",
+          "Description": "Destination of the copy operation on disk\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -5216,7 +5216,7 @@
         {
           "Id": "fde2acea801543bdb9bcb36109372d90",
           "Name": "overwriteFiles",
-          "Description": "bool\nDefault value : false",
+          "Description": "Toggle to overwrite existing directory\n\nbool\nDefault value : false",
           "UsingDefaultValue": true,
           "Level": 2,
           "UseLevels": false,
@@ -5227,7 +5227,7 @@
         {
           "Id": "b3b99ae0d0e7413fbc64ea27e2f04b34",
           "Name": "void",
-          "Description": "void",
+          "Description": "Node performs a task, doesn’t produce an output",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -5335,7 +5335,7 @@
         {
           "Id": "d4ec6a1af8444b93a251bb278a045bff",
           "Name": "directory",
-          "Description": "Directory to copy.\n\nvar",
+          "Description": "Directory to copy\n\nvar",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -5344,7 +5344,7 @@
         {
           "Id": "addbc867ca044cc98dd0d6f3aee40390",
           "Name": "destinationPath",
-          "Description": "Destination of the copy operation on disk.\n\nstring",
+          "Description": "Destination of the copy operation on disk\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -5353,7 +5353,7 @@
         {
           "Id": "7ecb1ea7cdf241dba0cc11122939ef61",
           "Name": "overwriteFiles",
-          "Description": "bool\nDefault value : false",
+          "Description": "Toggle to overwrite existing directory\n\nbool\nDefault value : false",
           "UsingDefaultValue": true,
           "Level": 2,
           "UseLevels": false,
@@ -5364,7 +5364,7 @@
         {
           "Id": "126ffeda844d48ff8c76546bd60bbee0",
           "Name": "void",
-          "Description": "void",
+          "Description": "Node performs a task, doesn’t produce an output",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -5452,7 +5452,7 @@
         {
           "Id": "bfea96d5d3f14b8183a8359e8cc10483",
           "Name": "directory",
-          "Description": "var",
+          "Description": "Directory to get contents of\n\nvar",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -5461,7 +5461,7 @@
         {
           "Id": "84687dd23bfb490c90982a3c91b1a24d",
           "Name": "searchString",
-          "Description": "string\nDefault value : \"*.*\"",
+          "Description": "Search string used to filter results\n\nstring\nDefault value : \"*.*\"",
           "UsingDefaultValue": true,
           "Level": 2,
           "UseLevels": false,
@@ -5470,7 +5470,7 @@
         {
           "Id": "9c8db6d464ba485d971b35ab3adebdf2",
           "Name": "includeSubdirectories",
-          "Description": "bool\nDefault value : false",
+          "Description": "Set to true to include files and folders in subdirectories (recursive) or set to false to include results from top-level of given directory only.\n\nbool\nDefault value : false",
           "UsingDefaultValue": true,
           "Level": 2,
           "UseLevels": false,
@@ -5481,7 +5481,7 @@
         {
           "Id": "feaebb93b35b4c5ea040ab4d01cf1bcd",
           "Name": "files",
-          "Description": "var",
+          "Description": "Resulting files from query",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -5490,7 +5490,7 @@
         {
           "Id": "f972527952974e75a1074db456035649",
           "Name": "directories",
-          "Description": "var",
+          "Description": "Resulting directories from query",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -5498,7 +5498,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "FileSystem.GetDirectoryContents (directory: var, searchString: string = \"*.*\", includeSubdirectories: bool = false): var[]..[]"
+      "Description": "Will return a list of files and directories that are contained within a given directory. An optional searchString can be used to filter the results.\n\nFileSystem.GetDirectoryContents (directory: var, searchString: string = \"*.*\", includeSubdirectories: bool = false): var[]..[]"
     },
     {
       "ConcreteType": "CoreNodeModels.Input.DirectoryObject, CoreNodeModels",
@@ -5559,7 +5559,7 @@
         {
           "Id": "659de513ef034a49881fff4a46ff2529",
           "Name": "path",
-          "Description": "Path to a directory on disk.\n\nstring",
+          "Description": "Path to a directory on disk\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -5579,7 +5579,7 @@
         {
           "Id": "45d6c63cc2e44973ac7dfddd3a4b91c5",
           "Name": "void",
-          "Description": "void",
+          "Description": "Node performs a task, doesn’t produce an output",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -5618,7 +5618,7 @@
         {
           "Id": "26c5749b7f094f13a3f71c6ea567c1de",
           "Name": "path",
-          "Description": "string",
+          "Description": "File path to delete\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -5629,7 +5629,7 @@
         {
           "Id": "3f230670bba043eaa14772a1bbf425c8",
           "Name": "void",
-          "Description": "void",
+          "Description": "Node performs a task, doesn’t produce an output",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -5834,7 +5834,7 @@
         },
         {
           "Id": "8c5eaadb790041ac992598c47710dbf0",
-          "Name": "unique keys",
+          "Name": "uniqueKeys",
           "Description": "key value corresponding to each group",
           "UsingDefaultValue": false,
           "Level": 2,
@@ -5894,8 +5894,8 @@
       "Inputs": [
         {
           "Id": "b95f14f8f8bd4e949de456354ecc0ae0",
-          "Name": "str",
-          "Description": "String to split up.\n\nstring",
+          "Name": "string",
+          "Description": "String to split up\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -5915,7 +5915,7 @@
         {
           "Id": "afefbc0191db4e258f7227917c34f7f0",
           "Name": "strings",
-          "Description": "List of strings made from the input string.",
+          "Description": "List of strings made from the input string",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -5923,7 +5923,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Divides a single string into a list of strings, with divisions determined by the given separator strings.\n\nString.Split (str: string, separators: string[]): string[]"
+      "Description": "Divides a single string into a list of strings, with divisions determined by the given separator strings.\n\nString.Split (string: string, separators: string[]): string[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
@@ -5973,7 +5973,7 @@
         {
           "Id": "495bff7e87974d89ad08fd9b7cd0fbc9",
           "Name": "keys",
-          "Description": "The string keys of the Dictionary\n\nstring[]",
+          "Description": "Keys of dictionary\n\nstring[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -5982,7 +5982,7 @@
         {
           "Id": "3cd6fade358540c981e87c85b5afa515",
           "Name": "values",
-          "Description": "The values of the Dictionary\n\nvar[]..[]",
+          "Description": "Values of dictionary\n\nvar[]..[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -5993,7 +5993,7 @@
         {
           "Id": "b2896d8a678d4d018dbec6ec51a3352e",
           "Name": "dictionary",
-          "Description": "The result Dictionary",
+          "Description": "Dictionary from keys and values",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -6021,7 +6021,7 @@
         {
           "Id": "7bdc6b32644646d9b06427c6a701f680",
           "Name": "key",
-          "Description": "The key in the Dictionary to obtain.\n\nstring",
+          "Description": "The key in the Dictionary to obtain value for\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": true,
@@ -6032,7 +6032,7 @@
         {
           "Id": "a2991b97fe37418295b92935c71037f2",
           "Name": "value",
-          "Description": "The value at the specified key or null if it is not set.",
+          "Description": "Value at the specified key or null if it is not set",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -6215,26 +6215,6 @@
       ],
       "Replication": "Disabled",
       "Description": "Allows you to select a directory on the system to get its path"
-    },
-    {
-      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
-      "NodeType": "BooleanInputNode",
-      "InputValue": true,
-      "Id": "21e5d13029e945aa8900ab333ded0b58",
-      "Inputs": [],
-      "Outputs": [
-        {
-          "Id": "86c43d7a21a24b9ab0ec76ef5e01d274",
-          "Name": "",
-          "Description": "Boolean",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Disabled",
-      "Description": "Selection between a true and false."
     },
     {
       "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
@@ -6480,7 +6460,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Get the files in a directory and its subdirectories. Use string for extension type, default is * for all files! If files are are readonly but not hidden, are they included. If files are both hidden or readonly files (and thereby system files) are they left out.\n\nDirectory.Contents (directory: string, searchString: string = \"*\", deepSearch: bool = false, condense: bool = true): var[]..[]"
+      "Description": "Get the files in a directory and its subdirectories. Use string for extension type, default is * for all files! If files are are readonly but not hidden, are they included. If files are both hidden or readonly files (and thereby system files) are they left out.\n\nDirectory.Contents (directory: string, searchString: string = \"*\", deepSearch: bool = false, condense: bool = true): var[]..[]\n\nNamespace:\nOrchid.Common"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -6640,7 +6620,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Determines if any items in the given list has a true value.\n\nList.AnyTrue (list: bool[]): bool"
+      "Description": "Determines if any items in the given list has a true value.\n\nList.AnyTrue (list: bool[]): bool\n\nNamespace:\nOrchid.Common"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
@@ -6768,8 +6748,8 @@
       "Inputs": [
         {
           "Id": "e78ba9d39b5d4f6b8a7133aa647de836",
-          "Name": "str",
-          "Description": "String to search in.\n\nstring",
+          "Name": "string",
+          "Description": "String to search in\n\nstring",
           "UsingDefaultValue": false,
           "Level": 1,
           "UseLevels": true,
@@ -6778,7 +6758,7 @@
         {
           "Id": "31a759ab5537492a9b23a251e616e1bc",
           "Name": "searchFor",
-          "Description": "Substring to search for.\n\nstring",
+          "Description": "Substring to search for\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -6787,7 +6767,7 @@
         {
           "Id": "7547dfd18ba14ddeaf739ca4b96ca7b3",
           "Name": "ignoreCase",
-          "Description": "Whether or not comparison takes case into account.\n\nbool\nDefault value : false",
+          "Description": "Whether or not comparison takes case into account\n\nbool\nDefault value : false",
           "UsingDefaultValue": true,
           "Level": 2,
           "UseLevels": false,
@@ -6798,7 +6778,7 @@
         {
           "Id": "1a5137b1ca9741ae9413c2cfe4ff428c",
           "Name": "bool",
-          "Description": "Whether the string contains the substring.",
+          "Description": "Whether the string contains the substring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -6806,7 +6786,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Determines if the given string contains the given substring.\n\nString.Contains (str: string, searchFor: string, ignoreCase: bool = false): bool"
+      "Description": "Determines if the given string contains the given substring.\n\nString.Contains (string: string, searchFor: string, ignoreCase: bool = false): bool"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
@@ -6946,7 +6926,7 @@
       "Inputs": [
         {
           "Id": "ec03858d470b4847bdc823b03a57d84d",
-          "Name": "obj",
+          "Name": "object",
           "Description": "An object.\n\nvar",
           "UsingDefaultValue": false,
           "Level": 2,
@@ -6957,8 +6937,8 @@
       "Outputs": [
         {
           "Id": "81c06e323c4a4f1db88d3d6b4cf03c61",
-          "Name": "var[]..[]",
-          "Description": "var[]..[]",
+          "Name": "object",
+          "Description": "Same object",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -6966,7 +6946,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Returns what is passed in, doing nothing.\n\nObject.Identity (obj: var): var[]..[]"
+      "Description": "Returns what is passed in, doing nothing.\n\nObject.Identity (object: var): var[]..[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
@@ -6976,8 +6956,8 @@
       "Inputs": [
         {
           "Id": "77c61a26fd49493b8b116f7502deec08",
-          "Name": "str",
-          "Description": "String to search in.\n\nstring",
+          "Name": "string",
+          "Description": "String to search in\n\nstring",
           "UsingDefaultValue": false,
           "Level": 1,
           "UseLevels": true,
@@ -6986,7 +6966,7 @@
         {
           "Id": "bfefc67ca73543cbba03b13d6626fe18",
           "Name": "searchFor",
-          "Description": "Substring to search for.\n\nstring",
+          "Description": "Substring to search for\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -6995,7 +6975,7 @@
         {
           "Id": "afbad27c4d5744f09fc7339f3e29e78f",
           "Name": "ignoreCase",
-          "Description": "Whether or not comparison takes case into account.\n\nbool\nDefault value : false",
+          "Description": "Whether or not comparison takes case into account\n\nbool\nDefault value : false",
           "UsingDefaultValue": true,
           "Level": 2,
           "UseLevels": false,
@@ -7006,7 +6986,7 @@
         {
           "Id": "35d4670e4225402882bd40ef64359980",
           "Name": "bool",
-          "Description": "Whether the string contains the substring.",
+          "Description": "Whether the string contains the substring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -7014,7 +6994,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Determines if the given string contains the given substring.\n\nString.Contains (str: string, searchFor: string, ignoreCase: bool = false): bool"
+      "Description": "Determines if the given string contains the given substring.\n\nString.Contains (string: string, searchFor: string, ignoreCase: bool = false): bool"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
@@ -7068,7 +7048,7 @@
     },
     {
       "ConcreteType": "Orchid.E.Common.Print.Printer, OrchidRE",
-      "SelectedIndex": 2,
+      "SelectedIndex": 1,
       "SelectedString": "PDFCreator",
       "NodeType": "ExtensionNode",
       "Id": "ee506f5f93ce46e18035983055c9115e",
@@ -7085,11 +7065,11 @@
         }
       ],
       "Replication": "Disabled",
-      "Description": "Dropdown for available printer(s)"
+      "Description": "Dropdown for available printer(s)\n\nNamespace:\nOrchid.Common"
     },
     {
       "ConcreteType": "Orchid.E.Common.Print.Setting, OrchidRE",
-      "SelectedIndex": 1,
+      "SelectedIndex": 17,
       "SelectedString": "PDFCreator_A0",
       "NodeType": "ExtensionNode",
       "Id": "9d07cff0b0054c3b990e62a9af67f7b4",
@@ -7106,7 +7086,7 @@
         }
       ],
       "Replication": "Disabled",
-      "Description": "Dropdown for print setting(s)"
+      "Description": "Dropdown for print setting(s)\n\nNamespace:\nOrchid.Common"
     },
     {
       "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
@@ -7248,7 +7228,7 @@
         {
           "Id": "ef65b6dfbc8f46488a8538362ef87dc2",
           "Name": "x",
-          "Description": "x value.\n\nvar[]..[]",
+          "Description": "Integer value, double value or string\n\nvar[]..[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -7257,7 +7237,7 @@
         {
           "Id": "0c1e12cf5bb74bf4b9f43632500447ce",
           "Name": "y",
-          "Description": "y value.\n\nvar[]..[]",
+          "Description": "Integer value, double value or string\n\nvar[]..[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -7267,8 +7247,8 @@
       "Outputs": [
         {
           "Id": "045a4c1f01a540e080ff07f6469b00b9",
-          "Name": "var[]..[]",
-          "Description": "var[]..[]",
+          "Name": "var",
+          "Description": "The sum of two input numbers, or the concatenation of two strings",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -7276,7 +7256,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Adds x to y.\n\n+ (x: var[]..[], y: var[]..[]): var[]..[]"
+      "Description": "Returns addition of x and y\n\n+ (x: var[]..[], y: var[]..[]): var[]..[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -7442,7 +7422,7 @@
         {
           "Id": "910c10fd649243d9a10c95ec76ffa1a4",
           "Name": "dateTime",
-          "Description": "The DateTime to format.\n\nvar",
+          "Description": "DateTime to format\n\nvar",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -7462,7 +7442,7 @@
         {
           "Id": "c7b62c80dfcd4b39a7659a50e4423e10",
           "Name": "string",
-          "Description": "The specified date and time as a string, in the specified format.",
+          "Description": "DateTime represented as a string",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -7482,7 +7462,7 @@
         {
           "Id": "197872e6b90348f09ba81d09b56dd2f2",
           "Name": "dateTime",
-          "Description": "DateTime",
+          "Description": "DateTime representing the present time",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -7520,8 +7500,8 @@
       "Inputs": [
         {
           "Id": "cda172df8a3a46f79ee5ccbc79abf631",
-          "Name": "str",
-          "Description": "String to be made uppercase.\n\nstring",
+          "Name": "string",
+          "Description": "String to be made uppercase\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -7531,8 +7511,8 @@
       "Outputs": [
         {
           "Id": "603dd71f9ee24452a585abcc7e253f1a",
-          "Name": "str",
-          "Description": "Uppercase string.",
+          "Name": "string",
+          "Description": "Uppercase string",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -7540,7 +7520,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Converts the given string to all uppercase characters.\n\nString.ToUpper (str: string): string"
+      "Description": "Converts the given string to all uppercase characters.\n\nString.ToUpper (string: string): string"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
@@ -7834,7 +7814,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Print by view sheet set. --> Note: If combined into one file is changed in this session, then the dynamo graph needs to be reloaded! Furthermore, if print to file is selected, then please check windows printer settings to verify if print to file is supported! Adobe PDF is NOT preset to do this!\n\nPrint.ByViewSheetSet (printer: string = \"default\", combine: bool = false, file: bool = false, fileName: string[] = null, viewSheetSet: Element, printSetting: var = \"<in-session>\"): void"
+      "Description": "Print by view sheet set. --> Note: If combined into one file is changed in this session, then the dynamo graph needs to be reloaded! Furthermore, if print to file is selected, then please check windows printer settings to verify if print to file is supported! Adobe PDF is NOT preset to do this!\n\nPrint.ByViewSheetSet (printer: string = \"default\", combine: bool = false, file: bool = false, fileName: string[] = null, viewSheetSet: Element, printSetting: var = \"<in-session>\"): void\n\nNamespace:\nOrchid.Common"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
@@ -7873,7 +7853,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Create sheet set.\n\nSheetSet.Create (view: Element[], name: string): var[]..[]"
+      "Description": "Create sheet set.\n\nSheetSet.Create (view: Element[], name: string): var[]..[]\n\nNamespace:\nOrchid.RevitProject.Views"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
@@ -7903,7 +7883,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Delete sheet set.\n\nSheetSet.Delete (viewSheetSet: var): void"
+      "Description": "Delete sheet set.\n\nSheetSet.Delete (viewSheetSet: var): void\n\nNamespace:\nOrchid.RevitProject.Views"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
@@ -7953,8 +7933,8 @@
       "Inputs": [
         {
           "Id": "ff9de94e15564227a1226e466f284a5e",
-          "Name": "str",
-          "Description": "String to search in.\n\nstring",
+          "Name": "string",
+          "Description": "String to search in\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -7963,7 +7943,7 @@
         {
           "Id": "463c022020bf411f96f89ef66d347ea6",
           "Name": "searchFor",
-          "Description": "Substring to search for.\n\nstring",
+          "Description": "Substring to search for\n\nstring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -7972,7 +7952,7 @@
         {
           "Id": "95d8c70a6263402fa310d6900fec2ca1",
           "Name": "ignoreCase",
-          "Description": "Whether or not comparison takes case into account.\n\nbool\nDefault value : false",
+          "Description": "Whether or not comparison takes case into account\n\nbool\nDefault value : false",
           "UsingDefaultValue": true,
           "Level": 2,
           "UseLevels": false,
@@ -7983,7 +7963,7 @@
         {
           "Id": "407f89c34cd54c17a2064093071b4714",
           "Name": "bool",
-          "Description": "Whether the string contains the substring.",
+          "Description": "Whether the string contains the substring",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -7991,7 +7971,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Determines if the given string contains the given substring.\n\nString.Contains (str: string, searchFor: string, ignoreCase: bool = false): bool"
+      "Description": "Determines if the given string contains the given substring.\n\nString.Contains (string: string, searchFor: string, ignoreCase: bool = false): bool"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -8265,8 +8245,8 @@
         },
         {
           "Id": "af5ae40513db4c938a5bef3e7d4e453d",
-          "Name": "amt",
-          "Description": "Layers of nesting to remove.\n\nint\nDefault value : -1",
+          "Name": "amount",
+          "Description": "Layers of list nesting to remove (-1 will remove all list nestings)\n\nint\nDefault value : -1",
           "UsingDefaultValue": true,
           "Level": 2,
           "UseLevels": false,
@@ -8276,8 +8256,8 @@
       "Outputs": [
         {
           "Id": "c96d3a7c0aac4c7ea5ca3de701bea426",
-          "Name": "var[]..[]",
-          "Description": "var[]..[]",
+          "Name": "list",
+          "Description": "Flattened list by amount",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -8285,7 +8265,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Flattens a nested list of lists by a certain amount.\n\nList.Flatten (list: var[]..[], amt: int = -1): var[]..[]"
+      "Description": "Flattens a nested list of lists by a certain amount.\n\nList.Flatten (list: var[]..[], amount: int = -1): var[]..[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
@@ -9043,6 +9023,84 @@
       ],
       "Replication": "Auto",
       "Description": "Removes all Null, Empty and Blank from a list or nested list of lists."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Views.Sheet.SheetNumber",
+      "Id": "ee1ba971323e4cf997ec4dddd65a0720",
+      "Inputs": [
+        {
+          "Id": "504dfdda47364c2188307c2b0ed0b8d1",
+          "Name": "sheet",
+          "Description": "Revit.Elements.Views.Sheet",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a49f80bbccdf4880b09b672fd418c633",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the SheetNumber of the Sheet\n\nSheet.SheetNumber: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.SortByKey@var[]..[],var[]..[]",
+      "Id": "fe10de61f5eb425a8857c0a203c7b600",
+      "Inputs": [
+        {
+          "Id": "28373d738d5f4080b5ed6c5db2abacb9",
+          "Name": "list",
+          "Description": "list to be sorted\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "31a4c66f656446cfb7301c617c5d0482",
+          "Name": "keys",
+          "Description": "list of keys, keys have to be sortable (e.g. numbers,strings)\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ed4450349ece4ec785409bbf885f75bb",
+          "Name": "sortedList",
+          "Description": "type: var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bf264f15862b40a4acba421df86d6c9a",
+          "Name": "sortedKeys",
+          "Description": "type: var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Sort list based on its keys\n\nList.SortByKey (list: var[]..[], keys: var[]..[]): var[]..[]"
     }
   ],
   "Connectors": [
@@ -9203,13 +9261,13 @@
     },
     {
       "Start": "675dea5e18a54ad79195bfe2c0438a68",
-      "End": "cc137571bfbb412d8bec5940ec4fe311",
-      "Id": "97c12e8c0f0d47648ad1131d7a328be5"
+      "End": "504dfdda47364c2188307c2b0ed0b8d1",
+      "Id": "fe906691fa884111ae7f5be3dafa00a1"
     },
     {
       "Start": "675dea5e18a54ad79195bfe2c0438a68",
-      "End": "88768eff68ea464db156a61eb259714d",
-      "Id": "996dd6d17c74414590c54794856d5fca"
+      "End": "28373d738d5f4080b5ed6c5db2abacb9",
+      "Id": "caad50e0d74a4f3d8bbdcc43e7a4e421"
     },
     {
       "Start": "7c2230839a0643478b03b598417fd8b9",
@@ -10108,8 +10166,8 @@
     },
     {
       "Start": "350302c1476348b0879a21ba3bf8ff3b",
-      "End": "abb78214bdc842f48d778b4df069de86",
-      "Id": "5133e815a85d45388ac19deca570a7a5"
+      "End": "d6fc45ad62044b58a4199d3951c0ea0f",
+      "Id": "7d12c4f6279d4909b241863f387b1ba7"
     },
     {
       "Start": "d96651f32d344dba97a4b4725b950005",
@@ -10610,6 +10668,21 @@
       "Start": "74f921756a8340c5a427eb232252b109",
       "End": "0bf324d36f0e4d758e1c7493ec431844",
       "Id": "8709880d3c4046d98f32f61b653d8ede"
+    },
+    {
+      "Start": "a49f80bbccdf4880b09b672fd418c633",
+      "End": "31a4c66f656446cfb7301c617c5d0482",
+      "Id": "c8fe0853e04b4421af838723024841b5"
+    },
+    {
+      "Start": "ed4450349ece4ec785409bbf885f75bb",
+      "End": "88768eff68ea464db156a61eb259714d",
+      "Id": "baf3085a02914cc59871b8a5afa1ccbf"
+    },
+    {
+      "Start": "ed4450349ece4ec785409bbf885f75bb",
+      "End": "cc137571bfbb412d8bec5940ec4fe311",
+      "Id": "17e0cf40fdb84fa9bdb92ded8412b1d6"
     }
   ],
   "Dependencies": [
@@ -10739,13 +10812,36 @@
       ]
     }
   ],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.12",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "1.10",
+      "Data": {}
+    }
+  ],
+  "Author": "None provided",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
   "Bindings": [],
   "View": {
     "Dynamo": {
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": true,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.3.2.15696",
+      "Version": "2.12.1.8246",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },
@@ -10909,8 +11005,8 @@
         "Name": "Category.ByName",
         "ShowGeometry": true,
         "Excluded": false,
-        "X": 6540.4031931164736,
-        "Y": 59.26324709353753
+        "X": 5931.3807710069923,
+        "Y": 57.412710446159963
       },
       {
         "Id": "41c63c3c77014ec99a47afb3353a95fe",
@@ -10919,8 +11015,8 @@
         "Name": "Code Block",
         "ShowGeometry": true,
         "Excluded": false,
-        "X": 6416.4031931164736,
-        "Y": 59.26324709353753
+        "X": 5807.3807710069923,
+        "Y": 57.412710446159963
       },
       {
         "Id": "14324e703757497fa577b95784a6f547",
@@ -10929,8 +11025,8 @@
         "Name": "All Elements of Category",
         "ShowGeometry": true,
         "Excluded": false,
-        "X": 6768.4031931164782,
-        "Y": 59.26324709353753
+        "X": 6159.3807710069968,
+        "Y": 57.412710446159963
       },
       {
         "Id": "db1c7593e5be46b489626692fc58c847",
@@ -10939,8 +11035,8 @@
         "Name": "Element.GetParameterValueByName",
         "ShowGeometry": true,
         "Excluded": false,
-        "X": 6964.8938356466178,
-        "Y": 118.63927921086247
+        "X": 6355.8714135371365,
+        "Y": 116.7887425634849
       },
       {
         "Id": "75d5c9c4a3f847259a7fa32cfd5eefae",
@@ -10949,8 +11045,8 @@
         "Name": "Code Block",
         "ShowGeometry": true,
         "Excluded": false,
-        "X": 6964.89383564662,
-        "Y": 228.90460301023745
+        "X": 6355.8714135371383,
+        "Y": 227.05406636285988
       },
       {
         "Id": "1ef93e8e60f74e4b9e256cf4ca342135",
@@ -10959,8 +11055,8 @@
         "Name": "==",
         "ShowGeometry": true,
         "Excluded": false,
-        "X": 7255.5030935830418,
-        "Y": 118.63927921086247
+        "X": 6646.4806714735605,
+        "Y": 116.7887425634849
       },
       {
         "Id": "7c6dfbda62eb4c139278a9ed23ef7340",
@@ -10969,8 +11065,8 @@
         "Name": "Code Block",
         "ShowGeometry": true,
         "Excluded": false,
-        "X": 7255.5030935830418,
-        "Y": 231.21762058036234
+        "X": 6646.4806714735605,
+        "Y": 229.36708393298477
       },
       {
         "Id": "c4343fbc93e041138a11a9df48394dde",
@@ -10979,8 +11075,8 @@
         "Name": "List.FilterByBoolMask",
         "ShowGeometry": true,
         "Excluded": false,
-        "X": 7465.4189137621852,
-        "Y": 59.26324709353753
+        "X": 6856.3964916527038,
+        "Y": 57.412710446159963
       },
       {
         "Id": "fc5297bb122d47e3916d4318e1b0f836",
@@ -11559,8 +11655,8 @@
         "Name": "Code Block",
         "ShowGeometry": true,
         "Excluded": false,
-        "X": 25515.333739102654,
-        "Y": 3198.9154455592952
+        "X": 25468.6101230139,
+        "Y": 3199.8139766379254
       },
       {
         "Id": "88ad37b18eb549eb96c2c2a80d6aec12",
@@ -12553,16 +12649,6 @@
         "Y": 2351.5376689260547
       },
       {
-        "Id": "21e5d13029e945aa8900ab333ded0b58",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Name": "Boolean",
-        "ShowGeometry": true,
-        "Excluded": false,
-        "X": 23410.445525053958,
-        "Y": 2710.4884776365452
-      },
-      {
         "Id": "8a7ef0a56fed49eda5902f045f497566",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
@@ -13421,11 +13507,31 @@
         "Excluded": false,
         "X": 26768.002518236255,
         "Y": -197.44058815535513
+      },
+      {
+        "Id": "ee1ba971323e4cf997ec4dddd65a0720",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Sheet.SheetNumber",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 7126.3312749042707,
+        "Y": 172.59037441743669
+      },
+      {
+        "Id": "fe10de61f5eb425a8857c0a203c7b600",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "List.SortByKey",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 7395.5502739291751,
+        "Y": 83.85124438258876
       }
     ],
     "Annotations": [],
-    "X": -31197.281448596434,
-    "Y": 899.41328440659447,
-    "Zoom": 1.1794054992382188
+    "X": -6999.6345461258188,
+    "Y": 232.41984098662141,
+    "Zoom": 0.59927120835909042
   }
 }
