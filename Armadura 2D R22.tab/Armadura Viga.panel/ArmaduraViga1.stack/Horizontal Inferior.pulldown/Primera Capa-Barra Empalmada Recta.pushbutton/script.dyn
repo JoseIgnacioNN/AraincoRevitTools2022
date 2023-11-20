@@ -5500,7 +5500,7 @@
       ]
     }
   ],
-  "Thumbnail": null,
+  "Thumbnail": "",
   "GraphDocumentationURL": null,
   "ExtensionWorkspaceData": [
     {
@@ -5562,7 +5562,7 @@
         "IsSetAsOutput": false,
         "Name": "MultipleInputForm ++",
         "ShowGeometry": false,
-        "Excluded": true,
+        "Excluded": false,
         "X": -1127.9340375712293,
         "Y": -266.406726979548
       },
@@ -6896,13 +6896,13 @@
           "cdaad6d1fc44432a82f7f50c00cbdc5b"
         ],
         "Left": 5961.76050080379,
-        "Top": -2463.42687304391,
+        "Top": -2454.42687304391,
         "Width": 1737.4197171495207,
-        "Height": 525.19405425664991,
+        "Height": 516.19405425664991,
         "FontSize": 24.0,
         "InitialTop": -2424.42687304391,
         "InitialHeight": 549.19510143032994,
-        "TextblockHeight": 29.0,
+        "TextblockHeight": 0.0,
         "Background": "#FFA4E1FF"
       },
       {
@@ -6931,13 +6931,13 @@
           "51eca2ebc9eb42fe805765c91f703ebb"
         ],
         "Left": 4993.52769269279,
-        "Top": -1562.488174966302,
+        "Top": -1553.488174966302,
         "Width": 2780.0840296352544,
-        "Height": 756.02867893737584,
+        "Height": 747.02867893737584,
         "FontSize": 24.0,
         "InitialTop": -1523.488174966302,
         "InitialHeight": 769.02867893737584,
-        "TextblockHeight": 29.0,
+        "TextblockHeight": 0.0,
         "Background": "#FF00FF00"
       },
       {
@@ -6966,13 +6966,13 @@
           "428a81f8b6694aa7b0d8a863df305eeb"
         ],
         "Left": 5218.952363317605,
-        "Top": 1443.5221539305824,
+        "Top": 1452.5221539305824,
         "Width": 2776.7806163110718,
-        "Height": 769.58600208353778,
+        "Height": 760.58600208353778,
         "FontSize": 24.0,
         "InitialTop": 1482.5221539305824,
         "InitialHeight": 782.58600208353778,
-        "TextblockHeight": 29.0,
+        "TextblockHeight": 0.0,
         "Background": "#FF00FF00"
       },
       {
@@ -6993,13 +6993,13 @@
           "fc9c93c7f88a48aa95b4c759cf1d461f"
         ],
         "Left": 6108.7168432762837,
-        "Top": 471.72052131783789,
+        "Top": 480.72052131783789,
         "Width": 1737.4197171495198,
-        "Height": 525.19405425664991,
+        "Height": 516.19405425664991,
         "FontSize": 24.0,
         "InitialTop": 510.72052131783789,
         "InitialHeight": 551.30946723312036,
-        "TextblockHeight": 29.0,
+        "TextblockHeight": 0.0,
         "Background": "#FFA4E1FF"
       }
     ],
