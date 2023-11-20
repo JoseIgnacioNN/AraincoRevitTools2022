@@ -4063,6 +4063,36 @@
       ],
       "Replication": "Disabled",
       "Description": "Allows you to select a file on the system to get its file path."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Sort@var[]",
+      "Id": "34fa8fc6940f48ffa99306a5a3536a9d",
+      "Inputs": [
+        {
+          "Id": "eee5c29bdc7b4113bbe7df8d5ebb5523",
+          "Name": "list",
+          "Description": "List of items to be sorted\n\nvar[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c6791650c45148ef8262ba483efb2cbf",
+          "Name": "int[]",
+          "Description": "The indices of the items in the sorted list",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Sorts a list by the items and return their indices.\n\nList.Sort (list: var[]): var[]..[]"
     }
   ],
   "Connectors": [
@@ -4563,8 +4593,8 @@
     },
     {
       "Start": "04758cdf675544d7ba3d0e2ce04bd616",
-      "End": "46052b395cb3486fae31ad6545210cb6",
-      "Id": "756428953f944bfd8ca62af06e725eb6"
+      "End": "eee5c29bdc7b4113bbe7df8d5ebb5523",
+      "Id": "0782415bfd8446b194df9b1705bf8f81"
     },
     {
       "Start": "c57ddb4f14c44d05a9bc591a7eec497f",
@@ -4770,6 +4800,11 @@
       "Start": "0d28cc6531f9476e88cefec5a933cc2e",
       "End": "1f0df2db4384467a9d6798a1d5c688cb",
       "Id": "09deb1211cca48a7b2d48a2f24f872ef"
+    },
+    {
+      "Start": "c6791650c45148ef8262ba483efb2cbf",
+      "End": "46052b395cb3486fae31ad6545210cb6",
+      "Id": "6926f09b66d748998d52554e49528c83"
     }
   ],
   "Dependencies": [
@@ -5663,8 +5698,8 @@
         "Name": "Sheet.SheetNumber",
         "ShowGeometry": true,
         "Excluded": false,
-        "X": 5531.3795531130236,
-        "Y": 1797.1477447335883
+        "X": 5255.750241869875,
+        "Y": 1793.8954814740821
       },
       {
         "Id": "853bc020947040f6896ca027c1879c59",
@@ -5985,11 +6020,21 @@
         "Excluded": false,
         "X": 851.08991519891424,
         "Y": 2960.7402016964325
+      },
+      {
+        "Id": "34fa8fc6940f48ffa99306a5a3536a9d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "List.Sort",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 5499.4479348338336,
+        "Y": 1751.7137018733031
       }
     ],
     "Annotations": [],
-    "X": 381.95351870916346,
-    "Y": 118.97778053004788,
-    "Zoom": 0.16891983620064505
+    "X": -6334.8410497788209,
+    "Y": -2036.4549897713805,
+    "Zoom": 1.229912734864939
   }
 }
