@@ -1231,12 +1231,12 @@
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
       "NodeType": "CodeBlockNode",
-      "Code": "\"Selecciona\\nUsuario\";\n\n[\"JNN\",\"PCC\",\"ACC\",\"ASA\",\"CSR\",\"SJM\",\"RPC\",\"COC\",\"MFS\",\"DSP\",\"HCP\",\"LBM\",\"MFS\",\"RAV\",\"XXX\"];\n[\"Jose Nuñez\",\"Patricia Caroca\",\"Alejandro Cifuentes\",\"Anibal Sanchez\",\"Cristian Salinas\",\"Sergio Jimenez\",\"Ruben Perez\",\"Cristian Orrego\",\"Macarena Fuentes\",\"Danny Salazar\",\"Hector Carrasco\",\"Leandro Barrios\",\"Macarena Fuentes\",\"Reinaldo Aguila\",\"Usuario\"];\n-1;",
+      "Code": "\"Selecciona\\nUsuario\";\n\n[\"JNN\",\"PCC\",\"ACC\",\"ASA\",\"CSR\",\"SJM\",\"RPC\",\"COC\",\"MFS\",\"DSP\",\"HCP\",\"LBM\",\"MFS\",\"RAV\",\"JNO\", \"XXX\"];\n[\"Jose Nuñez\",\"Patricia Caroca\",\"Alejandro Cifuentes\",\"Anibal Sanchez\",\"Cristian Salinas\",\"Sergio Jimenez\",\"Ruben Perez\",\"Cristian Orrego\",\"Macarena Fuentes\",\"Danny Salazar\",\"Hector Carrasco\",\"Leandro Barrios\",\"Macarena Fuentes\",\"Reinaldo Aguila\", \"Jaime Neira\", \"Usuario\"];\n-1;",
       "Id": "c3719238346e4c77987b5e81f2b8e08a",
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "3375210c4fdf4d16b5244dcb25414a1f",
+          "Id": "f964d6ddf2834066818063020087a657",
           "Name": "",
           "Description": "Value of expression at line 1",
           "UsingDefaultValue": false,
@@ -1245,7 +1245,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "d6c3f4a6b2ed40a1861b981c3c9d2859",
+          "Id": "4575366b55ad4f978a6c3995887801a7",
           "Name": "",
           "Description": "Value of expression at line 3",
           "UsingDefaultValue": false,
@@ -1254,7 +1254,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "57fc3a4b902344609ba8fb415f6c0abf",
+          "Id": "a9d4d73130f34b7fa3920d1be74d30f4",
           "Name": "",
           "Description": "Value of expression at line 4",
           "UsingDefaultValue": false,
@@ -1263,7 +1263,7 @@
           "KeepListStructure": false
         },
         {
-          "Id": "d039e6819e09438086d33f21d24dee27",
+          "Id": "a0cd14e782214eae95f0c5db1a0b634b",
           "Name": "",
           "Description": "Value of expression at line 5",
           "UsingDefaultValue": false,
@@ -1603,7 +1603,7 @@
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
       "NodeType": "FunctionNode",
-      "FunctionSignature": "Orchid.RevitProject.Filters.ParameterFilter.ByRule@string,Orchid.RevitProject.Filters.FilterRule[],Revit.Elements.Category[],bool",
+      "FunctionSignature": "Orchid.RevitProject.Filters.ParameterFilter.Create@string,Revit.Filter.FilterRule[],Revit.Elements.Category[],bool",
       "Id": "c682c385d56346578a6a877b433c6f61",
       "Inputs": [
         {
@@ -1618,7 +1618,7 @@
         {
           "Id": "7cc1671599774fb09f40d3df10e2c96f",
           "Name": "filterRule",
-          "Description": "FilterRule as Orchid type.\n\nFilterRule[]",
+          "Description": "Filter rule(s).\n\nFilterRule[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -1636,7 +1636,7 @@
         {
           "Id": "1ad52397c6e145d5b5028cd1456c2e0f",
           "Name": "andOr",
-          "Description": "True set an And filter, false set an Or filter!?\n\nbool\nDefault value : true",
+          "Description": "True set an AND filter, false set an OR filter!?\n\nbool\nDefault value : true",
           "UsingDefaultValue": true,
           "Level": 2,
           "UseLevels": false,
@@ -1647,7 +1647,7 @@
         {
           "Id": "76c007fd4c0c4ea7bd8b84cf3c833207",
           "Name": "ParameterFilter",
-          "Description": "ParameterFilter as Dynamo type.",
+          "Description": "Parameter filter element.",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -1655,7 +1655,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Create a filter by rule.\n\nParameterFilter.ByRule (name: string, filterRule: FilterRule[], category: Category[], andOr: bool = true): ParameterFilterElement\n\nNamespace:\nOrchid.RevitProject.Filters"
+      "Description": "Create a parameter filter element by filter rule and logical filter.\n\nParameterFilter.Create (name: string, filterRule: FilterRule[], category: Category[], andOr: bool = true): ParameterFilterElement"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
@@ -1666,7 +1666,7 @@
         {
           "Id": "70c4536d9370435f8c9d0906eb65b89d",
           "Name": "view",
-          "Description": "View as Dynamo type.\n\nView",
+          "Description": "View.\n\nView",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -1675,7 +1675,7 @@
         {
           "Id": "c600e64bed97406a855d12091f3f824f",
           "Name": "parameterFilter",
-          "Description": "ParameterFilter as Dynamo type.\n\nParameterFilterElement",
+          "Description": "Parameter filter.\n\nParameterFilterElement",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -1695,7 +1695,7 @@
         {
           "Id": "24edb041e37b4f54ba53c090b8e002e9",
           "Name": "View",
-          "Description": "View as Dynamo type.",
+          "Description": "View.",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -1703,7 +1703,7 @@
         }
       ],
       "Replication": "Longest",
-      "Description": "Add a filter to a View.\n\nView.AddFilter (view: View, parameterFilter: ParameterFilterElement, visibility: bool = true): View\n\nNamespace:\nOrchid.RevitProject.Views"
+      "Description": "Add a filter to a View.\n\nView.AddFilter (view: View, parameterFilter: ParameterFilterElement, visibility: bool = true): View"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -2746,24 +2746,23 @@
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
       "NodeType": "FunctionNode",
-      "FunctionSignature": "Orchid.RevitProject.Views.ViewTemplate.All@bool",
+      "FunctionSignature": "Orchid.RevitProject.Views.ViewTemplate.InDocument",
       "Id": "be3d441036f149c5abb6df024a856b26",
-      "Inputs": [
-        {
-          "Id": "f6911c8a5eb44235a5d4acc7c1d931b3",
-          "Name": "condense",
-          "Description": "Condense to shortest feasible output?\n\nbool\nDefault value : true",
-          "UsingDefaultValue": true,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
+      "Inputs": [],
       "Outputs": [
         {
           "Id": "da243b583fc14cc9a75be9064a2274bc",
           "Name": "ViewTemplate",
-          "Description": "ViewTemplate.",
+          "Description": "View template.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b344d50d1ea3483a8612bf056da223e0",
+          "Name": "Enum",
+          "Description": "ViewType as Revit enumeration type.",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -2771,7 +2770,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "All view template in current document Note: Due to limitations in dynamo will 3D templates fail!\n\nViewTemplate.All (condense: bool = true): var[]..[]\n\nNamespace:\nOrchid.RevitProject.Views"
+      "Description": "All view template in current document Note: Due to limitations in dynamo will 3D templates fail!\n\nViewTemplate.InDocument ( ): var[]..[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
@@ -3010,13 +3009,13 @@
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
       "NodeType": "FunctionNode",
-      "FunctionSignature": "Orchid.RevitProject.Views.ViewTemplate.Duplicate@Revit.Elements.Element,string",
+      "FunctionSignature": "Orchid.RevitProject.Views.ViewTemplate.Duplicate@Revit.Elements.Views.View,string",
       "Id": "9b84575fc7bd43cb8359ea4f7f410f53",
       "Inputs": [
         {
           "Id": "ecac69e0619f45d7b54a3c1eb5cb1ff7",
           "Name": "viewTemplate",
-          "Description": "View template as Dynamo type.\n\nElement",
+          "Description": "View template.\n\nView",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -3036,7 +3035,7 @@
         {
           "Id": "d3e921d01ca34b0f9d4bdaed25cbdf57",
           "Name": "ViewTemplate",
-          "Description": "ViewTemplate.",
+          "Description": "View template.",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -3044,7 +3043,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Duplicate view template.\n\nViewTemplate.Duplicate (viewTemplate: Element, name: string): Element\n\nNamespace:\nOrchid.RevitProject.Views"
+      "Description": "Duplicate view template.\n\nViewTemplate.Duplicate (viewTemplate: View, name: string): Element"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -3486,7 +3485,7 @@
         {
           "Id": "4e822751f6ea4eb9aed0c453ec5800c2",
           "Name": "FilterRule",
-          "Description": "FilterRule as Orchid type.",
+          "Description": "FilterRule.",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -3494,7 +3493,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Create a filter rule by Dynamo (Revit.Elements.Element) parameter. Note: This function handles only user-defined parameters, such as project, shared, and global parameters.\n\nFilterRule.Create (parameter: Element, ruleType: string, value: var): FilterRule\n\nNamespace:\nOrchid.RevitProject.Filters"
+      "Description": "Create a filter rule by Dynamo (Revit.Elements.Element) parameter. Note: This function handles only user-defined parameters, such as project, shared, and global parameters.\n\nFilterRule.Create (parameter: Element, ruleType: string, value: var): FilterRule"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -3732,13 +3731,13 @@
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
       "NodeType": "FunctionNode",
-      "FunctionSignature": "Orchid.RevitProject.Views.ViewTemplate.Set@Revit.Elements.Element,Revit.Elements.Element",
+      "FunctionSignature": "Orchid.RevitProject.Views.ViewTemplate.Set@Revit.Elements.Views.View,Revit.Elements.Views.View",
       "Id": "02d618258acd4114a42e708cbd66972f",
       "Inputs": [
         {
           "Id": "a59465b145434ceab1ebc7c3f969037d",
           "Name": "view",
-          "Description": "View as Dynamo type.\n\nElement",
+          "Description": "View.\n\nView",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -3747,7 +3746,7 @@
         {
           "Id": "0d64aa2b94be4afca16cc9ee30b883d3",
           "Name": "viewTemplate",
-          "Description": "View template as Dynamo type.\n\nElement\nDefault value : null",
+          "Description": "View template.\n\nView\nDefault value : null",
           "UsingDefaultValue": true,
           "Level": 2,
           "UseLevels": false,
@@ -3766,7 +3765,7 @@
         }
       ],
       "Replication": "Longest",
-      "Description": "Set view template by view.\n\nViewTemplate.Set (view: Element, viewTemplate: Element = null): Element\n\nNamespace:\nOrchid.RevitProject.Views"
+      "Description": "Set view template by view.\n\nViewTemplate.Set (view: View, viewTemplate: View = null): Element"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
@@ -4541,7 +4540,7 @@
         {
           "Id": "659b298d14194cb9b5a8cd778eea89c2",
           "Name": "view",
-          "Description": "View as Dynamo type.\n\nView",
+          "Description": "View.\n\nView",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -4550,7 +4549,7 @@
         {
           "Id": "8e8dbaee4a104212a39e9310343a3cd4",
           "Name": "parameterFilter",
-          "Description": "ParameterFilter as Dynamo type.\n\nParameterFilterElement",
+          "Description": "Parameter filter.\n\nParameterFilterElement",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -4570,7 +4569,7 @@
         {
           "Id": "50a3144ceac44f36864331588edcf5b2",
           "Name": "View",
-          "Description": "View as Dynamo type.",
+          "Description": "View.",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -4578,7 +4577,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Add a filter to a View.\n\nView.AddFilter (view: View, parameterFilter: ParameterFilterElement, visibility: bool = true): View\n\nNamespace:\nOrchid.RevitProject.Views"
+      "Description": "Add a filter to a View.\n\nView.AddFilter (view: View, parameterFilter: ParameterFilterElement, visibility: bool = true): View"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -4622,13 +4621,13 @@
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
       "NodeType": "FunctionNode",
-      "FunctionSignature": "Orchid.RevitProject.Views.ViewTemplate.Duplicate@Revit.Elements.Element,string",
+      "FunctionSignature": "Orchid.RevitProject.Views.ViewTemplate.Duplicate@Revit.Elements.Views.View,string",
       "Id": "6a0c2a204da743d39b5c61c751951f42",
       "Inputs": [
         {
           "Id": "10f6e8c17f1b4b3aa097a35c67d45f8f",
           "Name": "viewTemplate",
-          "Description": "View template as Dynamo type.\n\nElement",
+          "Description": "View template.\n\nView",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -4648,7 +4647,7 @@
         {
           "Id": "15cc42ce76364a7b9daec39c369bd74f",
           "Name": "ViewTemplate",
-          "Description": "ViewTemplate.",
+          "Description": "View template.",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -4656,7 +4655,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Duplicate view template.\n\nViewTemplate.Duplicate (viewTemplate: Element, name: string): Element\n\nNamespace:\nOrchid.RevitProject.Views"
+      "Description": "Duplicate view template.\n\nViewTemplate.Duplicate (viewTemplate: View, name: string): Element"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -4711,24 +4710,23 @@
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
       "NodeType": "FunctionNode",
-      "FunctionSignature": "Orchid.RevitProject.Views.ViewTemplate.All@bool",
+      "FunctionSignature": "Orchid.RevitProject.Views.ViewTemplate.InDocument",
       "Id": "40bac9f7c57849fd84f46e9503646425",
-      "Inputs": [
-        {
-          "Id": "25bf089bda33457aad3d8d8c417c8794",
-          "Name": "condense",
-          "Description": "Condense to shortest feasible output?\n\nbool\nDefault value : true",
-          "UsingDefaultValue": true,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
+      "Inputs": [],
       "Outputs": [
         {
           "Id": "5a278925f2e34e78978dedb24c5c8571",
           "Name": "ViewTemplate",
-          "Description": "ViewTemplate.",
+          "Description": "View template.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8f46dd8e1d9b4fceb5326cdb5a8abaa5",
+          "Name": "Enum",
+          "Description": "ViewType as Revit enumeration type.",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -4736,7 +4734,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "All view template in current document Note: Due to limitations in dynamo will 3D templates fail!\n\nViewTemplate.All (condense: bool = true): var[]..[]\n\nNamespace:\nOrchid.RevitProject.Views"
+      "Description": "All view template in current document Note: Due to limitations in dynamo will 3D templates fail!\n\nViewTemplate.InDocument ( ): var[]..[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
@@ -4905,13 +4903,13 @@
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
       "NodeType": "FunctionNode",
-      "FunctionSignature": "Orchid.RevitProject.Views.ViewTemplate.Set@Revit.Elements.Element,Revit.Elements.Element",
+      "FunctionSignature": "Orchid.RevitProject.Views.ViewTemplate.Set@Revit.Elements.Views.View,Revit.Elements.Views.View",
       "Id": "78eb14677c814be68ac15457a8a95169",
       "Inputs": [
         {
           "Id": "481f1a026d564a96b913321b4b3dc88e",
           "Name": "view",
-          "Description": "View as Dynamo type.\n\nElement",
+          "Description": "View.\n\nView",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -4920,7 +4918,7 @@
         {
           "Id": "ccf2fe6d7d054077852827c83f97a695",
           "Name": "viewTemplate",
-          "Description": "View template as Dynamo type.\n\nElement\nDefault value : null",
+          "Description": "View template.\n\nView\nDefault value : null",
           "UsingDefaultValue": true,
           "Level": 2,
           "UseLevels": false,
@@ -4939,7 +4937,7 @@
         }
       ],
       "Replication": "Longest",
-      "Description": "Set view template by view.\n\nViewTemplate.Set (view: Element, viewTemplate: Element = null): Element\n\nNamespace:\nOrchid.RevitProject.Views"
+      "Description": "Set view template by view.\n\nViewTemplate.Set (view: View, viewTemplate: View = null): Element"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -6082,13 +6080,13 @@
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
       "NodeType": "FunctionNode",
-      "FunctionSignature": "Orchid.RevitProject.Views.ViewTemplate.Duplicate@Revit.Elements.Element,string",
+      "FunctionSignature": "Orchid.RevitProject.Views.ViewTemplate.Duplicate@Revit.Elements.Views.View,string",
       "Id": "4948359ee5df4d51977c448df07a8097",
       "Inputs": [
         {
           "Id": "08c70e70c6324997982b992da905b146",
           "Name": "viewTemplate",
-          "Description": "View template as Dynamo type.\n\nElement",
+          "Description": "View template.\n\nView",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -6108,7 +6106,7 @@
         {
           "Id": "273fdfb58ffa48c496c39674da7b8e33",
           "Name": "ViewTemplate",
-          "Description": "ViewTemplate.",
+          "Description": "View template.",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -6116,7 +6114,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Duplicate view template.\n\nViewTemplate.Duplicate (viewTemplate: Element, name: string): Element\n\nNamespace:\nOrchid.RevitProject.Views"
+      "Description": "Duplicate view template.\n\nViewTemplate.Duplicate (viewTemplate: View, name: string): Element"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -6147,7 +6145,7 @@
         {
           "Id": "8bff3da435154d988acfacd95ea62cc2",
           "Name": "view",
-          "Description": "View as Dynamo type.\n\nView",
+          "Description": "View.\n\nView",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -6156,7 +6154,7 @@
         {
           "Id": "0bfa06154ed84dc49d8650d41682d985",
           "Name": "parameterFilter",
-          "Description": "ParameterFilter as Dynamo type.\n\nParameterFilterElement",
+          "Description": "Parameter filter.\n\nParameterFilterElement",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -6176,7 +6174,7 @@
         {
           "Id": "e86e43158dae45248d2ce00d07d3980b",
           "Name": "View",
-          "Description": "View as Dynamo type.",
+          "Description": "View.",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -6184,7 +6182,7 @@
         }
       ],
       "Replication": "Longest",
-      "Description": "Add a filter to a View.\n\nView.AddFilter (view: View, parameterFilter: ParameterFilterElement, visibility: bool = true): View\n\nNamespace:\nOrchid.RevitProject.Views"
+      "Description": "Add a filter to a View.\n\nView.AddFilter (view: View, parameterFilter: ParameterFilterElement, visibility: bool = true): View"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
@@ -6441,13 +6439,13 @@
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
       "NodeType": "FunctionNode",
-      "FunctionSignature": "Orchid.Common.DataStream.Await@var,var[]..[]",
+      "FunctionSignature": "Orchid.Common.DataStream.Await@var[]..[],var[]..[]",
       "Id": "d843e0f96d2f41519e0d7b26f35af285",
       "Inputs": [
         {
           "Id": "47a71d7bbf304911a9ef285adc2ab0ce",
           "Name": "pass",
-          "Description": "Data to pass.\n\nvar",
+          "Description": "Data to pass.\n\nvar[]..[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -6475,7 +6473,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Await a data stream before passing another data stream.\n\nDataStream.Await (pass: var, waitFor: var[]..[]): var[]..[]\n\nNamespace:\nOrchid.Common"
+      "Description": "Await a data stream before passing another data stream.\n\nDataStream.Await (pass: var[]..[], waitFor: var[]..[]): var[]..[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -6575,7 +6573,7 @@
         {
           "Id": "30ce171c533c4c41ac52ad69d98809c6",
           "Name": "ParameterFilter",
-          "Description": "ParameterFilter as Dynamo type.",
+          "Description": "Parameter filter element.",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -6583,7 +6581,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Get ParameterFilter by name.\n\nParameterFilter.ByName (name: string): ParameterFilterElement\n\nNamespace:\nOrchid.RevitProject.Filters"
+      "Description": "Get parameter filter element by name.\n\nParameterFilter.ByName (name: string): ParameterFilterElement"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
@@ -6765,24 +6763,23 @@
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
       "NodeType": "FunctionNode",
-      "FunctionSignature": "Orchid.RevitProject.Views.ViewTemplate.All@bool",
+      "FunctionSignature": "Orchid.RevitProject.Views.ViewTemplate.InDocument",
       "Id": "e5da33a9167545778125ac090f034c26",
-      "Inputs": [
-        {
-          "Id": "9ef56df23d5144c58decb727d8faa53b",
-          "Name": "condense",
-          "Description": "Condense to shortest feasible output?\n\nbool\nDefault value : true",
-          "UsingDefaultValue": true,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
+      "Inputs": [],
       "Outputs": [
         {
           "Id": "118df7b626414cec89bef2c772800644",
           "Name": "ViewTemplate",
-          "Description": "ViewTemplate.",
+          "Description": "View template.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "be8fc22930704a34a180ee5451c26239",
+          "Name": "Enum",
+          "Description": "ViewType as Revit enumeration type.",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -6790,7 +6787,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "All view template in current document Note: Due to limitations in dynamo will 3D templates fail!\n\nViewTemplate.All (condense: bool = true): var[]..[]\n\nNamespace:\nOrchid.RevitProject.Views"
+      "Description": "All view template in current document Note: Due to limitations in dynamo will 3D templates fail!\n\nViewTemplate.InDocument ( ): var[]..[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
@@ -7279,8 +7276,8 @@
         },
         {
           "Id": "c0de1083e2b04c97ad2a9cbdc4bb1f30",
-          "Name": "LinePattern",
-          "Description": "LinePattern element\n\nvar[]..[]\nDefault value : null",
+          "Name": "",
+          "Description": "var[]..[]",
           "UsingDefaultValue": true,
           "Level": 2,
           "UseLevels": false,
@@ -7612,11 +7609,20 @@
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
       "NodeType": "FunctionNode",
-      "FunctionSignature": "Orchid.RevitProject.Elements.SubCategory.ByCategory@var",
+      "FunctionSignature": "Orchid.RevitProject.Categories.SubCategory.ByCategory@Revit.Application.Document,var",
       "Id": "ea4b42b4c0e44b93afdbb0ce0bfe381d",
       "Inputs": [
         {
           "Id": "53717a6db95642ef9c8da21a91cccde0",
+          "Name": "document",
+          "Description": "Project document (rvt).\n\nDocument\nDefault value : null (disabled)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bc0283942a354e3794592f81767870d0",
           "Name": "category",
           "Description": "Category.\n\nvar",
           "UsingDefaultValue": false,
@@ -7629,7 +7635,7 @@
         {
           "Id": "602a3e2dfb9b46f38819ef6a748c1ad2",
           "Name": "SubCategory",
-          "Description": "Category.",
+          "Description": "Subcategory.",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -7637,7 +7643,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Get subcategories by category in document.\n\nSubCategory.ByCategory (category: var): var[]\n\nNamespace:\nOrchid.RevitProject.Elements"
+      "Description": "Get sub categories by category in document.\n\nSubCategory.ByCategory (document: Document = null, category: var): Category[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
@@ -7692,13 +7698,13 @@
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
       "NodeType": "FunctionNode",
-      "FunctionSignature": "Orchid.Common.DataStream.Await@var,var[]..[]",
+      "FunctionSignature": "Orchid.Common.DataStream.Await@var[]..[],var[]..[]",
       "Id": "48d86d87eadc42c0968fcda006ff2154",
       "Inputs": [
         {
           "Id": "7d9c706cde67469d865c11d3e771de44",
           "Name": "pass",
-          "Description": "Data to pass.\n\nvar",
+          "Description": "Data to pass.\n\nvar[]..[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -7726,18 +7732,18 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Await a data stream before passing another data stream.\n\nDataStream.Await (pass: var, waitFor: var[]..[]): var[]..[]\n\nNamespace:\nOrchid.Common"
+      "Description": "Await a data stream before passing another data stream.\n\nDataStream.Await (pass: var[]..[], waitFor: var[]..[]): var[]..[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
       "NodeType": "FunctionNode",
-      "FunctionSignature": "Orchid.Common.DataStream.Await@var,var[]..[]",
+      "FunctionSignature": "Orchid.Common.DataStream.Await@var[]..[],var[]..[]",
       "Id": "f0f91361d3764544879948aad43b6155",
       "Inputs": [
         {
           "Id": "b5a783bdacab4cf397aadb6b45bf8ec9",
           "Name": "pass",
-          "Description": "Data to pass.\n\nvar",
+          "Description": "Data to pass.\n\nvar[]..[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -7765,7 +7771,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Await a data stream before passing another data stream.\n\nDataStream.Await (pass: var, waitFor: var[]..[]): var[]..[]\n\nNamespace:\nOrchid.Common"
+      "Description": "Await a data stream before passing another data stream.\n\nDataStream.Await (pass: var[]..[], waitFor: var[]..[]): var[]..[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
@@ -8111,24 +8117,23 @@
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
       "NodeType": "FunctionNode",
-      "FunctionSignature": "Orchid.RevitProject.Views.ViewTemplate.All@bool",
+      "FunctionSignature": "Orchid.RevitProject.Views.ViewTemplate.InDocument",
       "Id": "ed70360ca62d4d37822186fa67ec3d66",
-      "Inputs": [
-        {
-          "Id": "223efec625a34901a001f95a000932a4",
-          "Name": "condense",
-          "Description": "Condense to shortest feasible output?\n\nbool\nDefault value : true",
-          "UsingDefaultValue": true,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
+      "Inputs": [],
       "Outputs": [
         {
           "Id": "c5ca37a4d63041e3a752e8839c184d12",
           "Name": "ViewTemplate",
-          "Description": "ViewTemplate.",
+          "Description": "View template.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d16a9ffc4fce4328aa24a1bc5c7f3c6c",
+          "Name": "Enum",
+          "Description": "ViewType as Revit enumeration type.",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -8136,18 +8141,18 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "All view template in current document Note: Due to limitations in dynamo will 3D templates fail!\n\nViewTemplate.All (condense: bool = true): var[]..[]\n\nNamespace:\nOrchid.RevitProject.Views"
+      "Description": "All view template in current document Note: Due to limitations in dynamo will 3D templates fail!\n\nViewTemplate.InDocument ( ): var[]..[]"
     },
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
       "NodeType": "FunctionNode",
-      "FunctionSignature": "Orchid.Common.DataStream.Await@var,var[]..[]",
+      "FunctionSignature": "Orchid.Common.DataStream.Await@var[]..[],var[]..[]",
       "Id": "ab86e5f732a840b7b901e416ece8fb0b",
       "Inputs": [
         {
           "Id": "98eeefc48df649ce947280f673988062",
           "Name": "pass",
-          "Description": "Data to pass.\n\nvar",
+          "Description": "Data to pass.\n\nvar[]..[]",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -8175,7 +8180,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Await a data stream before passing another data stream.\n\nDataStream.Await (pass: var, waitFor: var[]..[]): var[]..[]\n\nNamespace:\nOrchid.Common"
+      "Description": "Await a data stream before passing another data stream.\n\nDataStream.Await (pass: var[]..[], waitFor: var[]..[]): var[]..[]"
     },
     {
       "ConcreteType": "CoreNodeModels.FromObject, CoreNodeModels",
@@ -8959,24 +8964,24 @@
       "Id": "2fccd3ba1829443d931b9e5e65137f3f"
     },
     {
-      "Start": "3375210c4fdf4d16b5244dcb25414a1f",
+      "Start": "f964d6ddf2834066818063020087a657",
       "End": "d09412374ed143b69f027892cbd9b6a6",
-      "Id": "b5cb7ce4836f454f95964ebbdd3219b4"
+      "Id": "fdfccc42915d4cad81d7da284fc8f119"
     },
     {
-      "Start": "d6c3f4a6b2ed40a1861b981c3c9d2859",
+      "Start": "4575366b55ad4f978a6c3995887801a7",
       "End": "4ea18a1c497d4c4ba1d00cbfc6c795cb",
-      "Id": "dabcb4b13bbc4e1bbde3b78bc90b79b6"
+      "Id": "37a0b4405ad7432fa7195568109986c1"
     },
     {
-      "Start": "57fc3a4b902344609ba8fb415f6c0abf",
+      "Start": "a9d4d73130f34b7fa3920d1be74d30f4",
       "End": "94f38b1ef8c34e92a06522c7a59b88c0",
-      "Id": "aa2d5f90c8b042d28bdb2bd97c9b3652"
+      "Id": "26f3cc4098df4a59b3c9a5197b00426a"
     },
     {
-      "Start": "d039e6819e09438086d33f21d24dee27",
+      "Start": "a0cd14e782214eae95f0c5db1a0b634b",
       "End": "fe428d4de6f1485b952ab740648ca1e5",
-      "Id": "2f94dba8d2934f41805617d45f1c28d3"
+      "Id": "dd6e71b00f874c00b99e4949b0eec162"
     },
     {
       "Start": "77882611a27441758d20a46df4235846",
@@ -10194,11 +10199,6 @@
       "Id": "6ecf34395ddb46ac832c263dacf5f97b"
     },
     {
-      "Start": "b88b5f092aff4654ba3baeaf195f86b0",
-      "End": "223efec625a34901a001f95a000932a4",
-      "Id": "5019a9fc24c0433aa27d29488b7e9af4"
-    },
-    {
       "Start": "c6c83b2f70244fd4ab9e0da3a1771a3a",
       "End": "e7b59c11e4e843738fbb4d1bf8a24e85",
       "Id": "f73c13ba2bc1440586c8f4f53e66cef0"
@@ -10441,7 +10441,7 @@
       ]
     }
   ],
-  "Thumbnail": null,
+  "Thumbnail": "",
   "GraphDocumentationURL": null,
   "ExtensionWorkspaceData": [
     {
@@ -10464,26 +10464,7 @@
     "warningCount": 0,
     "errorCount": 0
   },
-  "Bindings": [
-    {
-      "NodeId": "7de831a6-1079-4c39-b232-3943b092b0f6",
-      "Binding": {
-        "ByLevel_InClassDecl-1_InFunctionScope-1_Instance0_7de831a6-1079-4c39-b232-3943b092b0f6": "PFNPQVAtRU5WOkVudmVsb3BlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOlNPQVAtRU5DPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyIgeG1sbnM6U09BUC1FTlY9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIiB4bWxuczpjbHI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vc29hcC9lbmNvZGluZy9jbHIvMS4wIiBTT0FQLUVOVjplbmNvZGluZ1N0eWxlPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyI+DQo8U09BUC1FTlY6Qm9keT4NCjxhMTpDYWxsU2l0ZV94MDAyQl9UcmFjZVNlcmlhbGlzZXJIZWxwZXIgaWQ9InJlZi0xIiB4bWxuczphMT0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9jbHIvbnNhc3NlbS9Qcm90b0NvcmUvUHJvdG9Db3JlJTJDJTIwVmVyc2lvbiUzRDIuMTIuMS44MjQ2JTJDJTIwQ3VsdHVyZSUzRG5ldXRyYWwlMkMlMjBQdWJsaWNLZXlUb2tlbiUzRG51bGwiPg0KPE51bWJlck9mRWxlbWVudHM+MTwvTnVtYmVyT2ZFbGVtZW50cz4NCjxCYXNlLTBfSGFzRGF0YT5mYWxzZTwvQmFzZS0wX0hhc0RhdGE+DQo8QmFzZS0wX0hhc05lc3RlZERhdGE+dHJ1ZTwvQmFzZS0wX0hhc05lc3RlZERhdGE+DQo8QmFzZS0wX05lc3RlZERhdGFDb3VudD4zPC9CYXNlLTBfTmVzdGVkRGF0YUNvdW50Pg0KPEJhc2UtMC0wX0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTBfSGFzRGF0YT4NCjxCYXNlLTAtMF9EYXRhIGlkPSJyZWYtMyI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFeUxqRXVPRFF4TVNVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBqbG1aak01TURjeUxUSmhZekF0TkRWaU9TMDRZek5tTFRVeE1qSTFZemd4WVdFMU1DMHdNREExT1dVNE5qd3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStNelk0TWpZeVBDOXBiblJKUkQ0TkNqd3ZZVEU2VTJWeWFXRnNhWHBoWW14bFNXUStEUW84TDFOUFFWQXRSVTVXT2tKdlpIaytEUW84TDFOUFFWQXRSVTVXT2tWdWRtVnNiM0JsUGcwSzwvQmFzZS0wLTBfRGF0YT4NCjxCYXNlLTAtMF9IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtMF9IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC0xX0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTFfSGFzRGF0YT4NCjxCYXNlLTAtMV9EYXRhIGlkPSJyZWYtNCI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFeUxqRXVPRFF4TVNVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBqbG1aak01TURjeUxUSmhZekF0TkRWaU9TMDRZek5tTFRVeE1qSTFZemd4WVdFMU1DMHdNREExT1dVNU1Ed3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStNelk0TWpjeVBDOXBiblJKUkQ0TkNqd3ZZVEU2VTJWeWFXRnNhWHBoWW14bFNXUStEUW84TDFOUFFWQXRSVTVXT2tKdlpIaytEUW84TDFOUFFWQXRSVTVXT2tWdWRtVnNiM0JsUGcwSzwvQmFzZS0wLTFfRGF0YT4NCjxCYXNlLTAtMV9IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtMV9IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC0yX0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTJfSGFzRGF0YT4NCjxCYXNlLTAtMl9EYXRhIGlkPSJyZWYtNSI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFeUxqRXVPRFF4TVNVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBqbG1aak01TURjeUxUSmhZekF0TkRWaU9TMDRZek5tTFRVeE1qSTFZemd4WVdFMU1DMHdNREExT1dVNVlUd3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStNelk0TWpneVBDOXBiblJKUkQ0TkNqd3ZZVEU2VTJWeWFXRnNhWHBoWW14bFNXUStEUW84TDFOUFFWQXRSVTVXT2tKdlpIaytEUW84TDFOUFFWQXRSVTVXT2tWdWRtVnNiM0JsUGcwSzwvQmFzZS0wLTJfRGF0YT4NCjxCYXNlLTAtMl9IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtMl9IYXNOZXN0ZWREYXRhPg0KPC9hMTpDYWxsU2l0ZV94MDAyQl9UcmFjZVNlcmlhbGlzZXJIZWxwZXI+DQo8L1NPQVAtRU5WOkJvZHk+DQo8L1NPQVAtRU5WOkVudmVsb3BlPg0K"
-      }
-    },
-    {
-      "NodeId": "c682c385-d563-4657-8a6a-877b433c6f61",
-      "Binding": {
-        "ByRule_InClassDecl-1_InFunctionScope-1_Instance0_c682c385-d563-4657-8a6a-877b433c6f61": "PFNPQVAtRU5WOkVudmVsb3BlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOlNPQVAtRU5DPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyIgeG1sbnM6U09BUC1FTlY9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIiB4bWxuczpjbHI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vc29hcC9lbmNvZGluZy9jbHIvMS4wIiBTT0FQLUVOVjplbmNvZGluZ1N0eWxlPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyI+DQo8U09BUC1FTlY6Qm9keT4NCjxhMTpDYWxsU2l0ZV94MDAyQl9UcmFjZVNlcmlhbGlzZXJIZWxwZXIgaWQ9InJlZi0xIiB4bWxuczphMT0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9jbHIvbnNhc3NlbS9Qcm90b0NvcmUvUHJvdG9Db3JlJTJDJTIwVmVyc2lvbiUzRDIuMTIuMS44MjQ2JTJDJTIwQ3VsdHVyZSUzRG5ldXRyYWwlMkMlMjBQdWJsaWNLZXlUb2tlbiUzRG51bGwiPg0KPE51bWJlck9mRWxlbWVudHM+MTwvTnVtYmVyT2ZFbGVtZW50cz4NCjxCYXNlLTBfSGFzRGF0YT5mYWxzZTwvQmFzZS0wX0hhc0RhdGE+DQo8QmFzZS0wX0hhc05lc3RlZERhdGE+dHJ1ZTwvQmFzZS0wX0hhc05lc3RlZERhdGE+DQo8QmFzZS0wX05lc3RlZERhdGFDb3VudD4xPC9CYXNlLTBfTmVzdGVkRGF0YUNvdW50Pg0KPEJhc2UtMC0wX0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTBfSGFzRGF0YT4NCjxCYXNlLTAtMF9EYXRhIGlkPSJyZWYtMyI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFeUxqRXVPRFF4TVNVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBqbG1aak01TURjeUxUSmhZekF0TkRWaU9TMDRZek5tTFRVeE1qSTFZemd4WVdFMU1DMHdNREExT1dWaE5qd3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStNelk0TWprMFBDOXBiblJKUkQ0TkNqd3ZZVEU2VTJWeWFXRnNhWHBoWW14bFNXUStEUW84TDFOUFFWQXRSVTVXT2tKdlpIaytEUW84TDFOUFFWQXRSVTVXT2tWdWRtVnNiM0JsUGcwSzwvQmFzZS0wLTBfRGF0YT4NCjxCYXNlLTAtMF9IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtMF9IYXNOZXN0ZWREYXRhPg0KPC9hMTpDYWxsU2l0ZV94MDAyQl9UcmFjZVNlcmlhbGlzZXJIZWxwZXI+DQo8L1NPQVAtRU5WOkJvZHk+DQo8L1NPQVAtRU5WOkVudmVsb3BlPg0K"
-      }
-    },
-    {
-      "NodeId": "dcdda026-7454-43c8-9b3d-a4f4a024ce9a",
-      "Binding": {
-        "ByLevel_InClassDecl-1_InFunctionScope-1_Instance0_dcdda026-7454-43c8-9b3d-a4f4a024ce9a": "PFNPQVAtRU5WOkVudmVsb3BlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOlNPQVAtRU5DPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyIgeG1sbnM6U09BUC1FTlY9Imh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3NvYXAvZW52ZWxvcGUvIiB4bWxuczpjbHI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vc29hcC9lbmNvZGluZy9jbHIvMS4wIiBTT0FQLUVOVjplbmNvZGluZ1N0eWxlPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyI+DQo8U09BUC1FTlY6Qm9keT4NCjxhMTpDYWxsU2l0ZV94MDAyQl9UcmFjZVNlcmlhbGlzZXJIZWxwZXIgaWQ9InJlZi0xIiB4bWxuczphMT0iaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS9jbHIvbnNhc3NlbS9Qcm90b0NvcmUvUHJvdG9Db3JlJTJDJTIwVmVyc2lvbiUzRDIuMTIuMS44MjQ2JTJDJTIwQ3VsdHVyZSUzRG5ldXRyYWwlMkMlMjBQdWJsaWNLZXlUb2tlbiUzRG51bGwiPg0KPE51bWJlck9mRWxlbWVudHM+MTwvTnVtYmVyT2ZFbGVtZW50cz4NCjxCYXNlLTBfSGFzRGF0YT5mYWxzZTwvQmFzZS0wX0hhc0RhdGE+DQo8QmFzZS0wX0hhc05lc3RlZERhdGE+dHJ1ZTwvQmFzZS0wX0hhc05lc3RlZERhdGE+DQo8QmFzZS0wX05lc3RlZERhdGFDb3VudD4zPC9CYXNlLTBfTmVzdGVkRGF0YUNvdW50Pg0KPEJhc2UtMC0wX0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTBfSGFzRGF0YT4NCjxCYXNlLTAtMF9EYXRhIGlkPSJyZWYtMyI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFeUxqRXVPRFF4TVNVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBqbG1aak01TURjeUxUSmhZekF0TkRWaU9TMDRZek5tTFRVeE1qSTFZemd4WVdFMU1DMHdNREExT1dWaE56d3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStNelk0TWprMVBDOXBiblJKUkQ0TkNqd3ZZVEU2VTJWeWFXRnNhWHBoWW14bFNXUStEUW84TDFOUFFWQXRSVTVXT2tKdlpIaytEUW84TDFOUFFWQXRSVTVXT2tWdWRtVnNiM0JsUGcwSzwvQmFzZS0wLTBfRGF0YT4NCjxCYXNlLTAtMF9IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtMF9IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC0xX0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTFfSGFzRGF0YT4NCjxCYXNlLTAtMV9EYXRhIGlkPSJyZWYtNCI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFeUxqRXVPRFF4TVNVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBqbG1aak01TURjeUxUSmhZekF0TkRWaU9TMDRZek5tTFRVeE1qSTFZemd4WVdFMU1DMHdNREExT1dWaU1Ud3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStNelk0TXpBMVBDOXBiblJKUkQ0TkNqd3ZZVEU2VTJWeWFXRnNhWHBoWW14bFNXUStEUW84TDFOUFFWQXRSVTVXT2tKdlpIaytEUW84TDFOUFFWQXRSVTVXT2tWdWRtVnNiM0JsUGcwSzwvQmFzZS0wLTFfRGF0YT4NCjxCYXNlLTAtMV9IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtMV9IYXNOZXN0ZWREYXRhPg0KPEJhc2UtMC0yX0hhc0RhdGE+dHJ1ZTwvQmFzZS0wLTJfSGFzRGF0YT4NCjxCYXNlLTAtMl9EYXRhIGlkPSJyZWYtNSI+UEZOUFFWQXRSVTVXT2tWdWRtVnNiM0JsSUhodGJHNXpPbmh6YVQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0V0YVc1emRHRnVZMlVpSUhodGJHNXpPbmh6WkQwaWFIUjBjRG92TDNkM2R5NTNNeTV2Y21jdk1qQXdNUzlZVFV4VFkyaGxiV0VpSUhodGJHNXpPbE5QUVZBdFJVNURQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SWdlRzFzYm5NNlUwOUJVQzFGVGxZOUltaDBkSEE2THk5elkyaGxiV0Z6TG5odGJITnZZWEF1YjNKbkwzTnZZWEF2Wlc1MlpXeHZjR1V2SWlCNGJXeHVjenBqYkhJOUltaDBkSEE2THk5elkyaGxiV0Z6TG0xcFkzSnZjMjltZEM1amIyMHZjMjloY0M5bGJtTnZaR2x1Wnk5amJISXZNUzR3SWlCVFQwRlFMVVZPVmpwbGJtTnZaR2x1WjFOMGVXeGxQU0pvZEhSd09pOHZjMk5vWlcxaGN5NTRiV3h6YjJGd0xtOXlaeTl6YjJGd0wyVnVZMjlrYVc1bkx5SStEUW84VTA5QlVDMUZUbFk2UW05a2VUNE5DanhoTVRwVFpYSnBZV3hwZW1GaWJHVkpaQ0JwWkQwaWNtVm1MVEVpSUhodGJHNXpPbUV4UFNKb2RIUndPaTh2YzJOb1pXMWhjeTV0YVdOeWIzTnZablF1WTI5dEwyTnNjaTl1YzJGemMyVnRMMUpsZG1sMFUyVnlkbWxqWlhNdVVHVnljMmx6ZEdWdVkyVXZVbVYyYVhSVFpYSjJhV05sY3lVeVF5VXlNRlpsY25OcGIyNGxNMFF5TGpFeUxqRXVPRFF4TVNVeVF5VXlNRU4xYkhSMWNtVWxNMFJ1WlhWMGNtRnNKVEpESlRJd1VIVmliR2xqUzJWNVZHOXJaVzRsTTBSdWRXeHNJajROQ2p4emRISnBibWRKUkNCcFpEMGljbVZtTFRNaVBqbG1aak01TURjeUxUSmhZekF0TkRWaU9TMDRZek5tTFRVeE1qSTFZemd4WVdFMU1DMHdNREExT1dWaVlqd3ZjM1J5YVc1blNVUStEUW84YVc1MFNVUStNelk0TXpFMVBDOXBiblJKUkQ0TkNqd3ZZVEU2VTJWeWFXRnNhWHBoWW14bFNXUStEUW84TDFOUFFWQXRSVTVXT2tKdlpIaytEUW84TDFOUFFWQXRSVTVXT2tWdWRtVnNiM0JsUGcwSzwvQmFzZS0wLTJfRGF0YT4NCjxCYXNlLTAtMl9IYXNOZXN0ZWREYXRhPmZhbHNlPC9CYXNlLTAtMl9IYXNOZXN0ZWREYXRhPg0KPC9hMTpDYWxsU2l0ZV94MDAyQl9UcmFjZVNlcmlhbGlzZXJIZWxwZXI+DQo8L1NPQVAtRU5WOkJvZHk+DQo8L1NPQVAtRU5WOkVudmVsb3BlPg0K"
-      }
-    }
-  ],
+  "Bindings": [],
   "View": {
     "Dynamo": {
       "ScaleFactor": 1.0,
@@ -10793,8 +10774,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -2620.8859741923261,
-        "Y": 1197.6299019494493
+        "X": -2620.88597419233,
+        "Y": 1197.62990194945
       },
       {
         "ShowGeometry": false,
@@ -10803,7 +10784,7 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -3338.88597419232,
+        "X": -3443.34431468663,
         "Y": 1197.62990194945
       },
       {
@@ -12878,8 +12859,8 @@
       }
     ],
     "Annotations": [],
-    "X": 322.70104020672346,
-    "Y": 589.70509577971961,
-    "Zoom": 0.05750278360893691
+    "X": 3654.1355881519062,
+    "Y": -818.38192687507853,
+    "Zoom": 0.91902666216711992
   }
 }
